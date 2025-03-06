@@ -1,0 +1,185 @@
+.dashboard-container
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-top:3.125rem;
+    width: 100vw;
+    margin-bottom: 0;
+}
+
+.dashboard-links
+{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-left: 10px;
+    padding-top: 30px;
+    row-gap: 20px;
+    box-shadow: 0px 0px 15px #ffffff;
+    height:98vh;
+    width: 15%;
+}
+
+.link-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F4A261;
+    gap: 7px;
+    font-size: 20px;
+}
+
+#dashboard-links
+{
+    font-style: none;
+    text-decoration: none;
+    color: #FFD700;
+}
+
+/* status section */
+
+.dashboard-menu-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 20px;
+    /* margin-top: 3.125rem; */
+}
+
+.status-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 15px;
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    box-shadow: rgba(0, 0, 0, 0.268) 0px 0px 8px;
+    border-radius: 8px;
+}
+
+/* Icon */
+#icon {
+    width: 25px;
+    height: 25px;
+    color: #F4A261; /* Warm Orange */
+}
+
+/* Headings */
+.status-card > h1 {
+    background: linear-gradient(to right, #FFD700, #FFC300); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+}
+
+/* Paragraph */
+.status-card > p {
+    color: #E0E0E0; 
+    font-size: 1rem;
+}
+
+/* Button */
+.status-card > button, .status-card >a{
+    padding: 5px 15px;
+    border-radius: 1.2rem;
+    background-color: #004466; 
+    color: #FFD700; 
+    text-decoration: none;
+    border: 1px solid #FFD700;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.status-card > button:hover,.status-card >a:hover {
+    background-color: #FFD700; 
+    color: #004466; 
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); 
+}
+
+.link-component{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.125rem;
+    width: 100%;
+}
+
+.user-header>p{
+    color:#FFFF ;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+#user-name{
+    color: #FFD700;
+}
+
+
+/* -------------user kyc style--------------- */
+.kyc-container {
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .kyc-container h1 {
+    font-size: 20px;
+    color: #f9f9f9;;
+    margin-bottom: 15px;
+  }
+  
+  .kyc-container p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .kyc-container ul {
+    list-style-type: disc; /* Proper bullet points */
+    padding-left: 20px; /* Proper alignment */
+    margin: 10px 0;
+  }
+  
+  .kyc-container li {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px 0;
+    color: #ffcc;
+    font-weight: 500;
+  }
+  
+  .kyc-container button {
+    padding: 10px 15px;
+    border-radius: 1.2rem;
+    background-color: #004466; 
+    color: #FFD700; 
+    text-decoration: none;
+    border: 1px solid #FFD700;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .kyc-container button:hover {
+    background-color: #FFD700; 
+    color: #004466; 
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); 
+  }
+  
+  

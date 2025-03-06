@@ -1,0 +1,165 @@
+.user-card {
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    color: #E0E0E0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.268) 0px 0px 8px;
+    width: 380px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    /* margin-top: 3.125rem; */
+    margin-left: 20px;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-user {
+    font-size: 60px;
+    color: #FFD700; /* Gold */
+}
+
+h2 {
+    color: #FFD700;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.icon {
+    color: #F4A261; /* Warm Orange */
+    margin-right: 5px;
+}
+
+/* KYC Status */
+.kyc-status {
+    font-weight: bold;
+}
+
+.verified {
+    color: #32CD32; /* Green */
+    font-weight: bold;
+}
+
+.not-verified {
+    color: #FF6347; /* Red */
+    font-weight: bold;
+}
+
+/* Payment Screenshot */
+.payment-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.payment-section>a
+{
+    border: 1px solid #008388;
+    padding: 5px;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    font-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.payment-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+    border: 2px solid #FFD700;
+    margin-top: 5px;
+}
+
+/* Token Section */
+.token-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.token-amount {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 15px;
+}
+
+/* Switch Styling */
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40px;
+}
+
+.switch-on, .switch-off {
+    width: 42px;
+    height: 22px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px;
+    border: none;
+}
+
+.switch-on {
+    background-color: #51cd32;
+    justify-content: flex-end;
+    border: none;
+}
+
+.switch-off {
+    background-color: red;
+    border: none;
+}
+
+.switch-thumb {
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.switch-on .switch-thumb {
+    transform: translateX(20px);
+}
+
+
+.radio-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.radio-section>input{
+    border: 1px solid #008388;
+}

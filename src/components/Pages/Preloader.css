@@ -1,0 +1,29 @@
+.preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.loader-text
+{
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff98e2, #ffc876, #79fff7);
+    background-clip:text ;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+
+  
+  
+  
+  

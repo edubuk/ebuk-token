@@ -1,0 +1,159 @@
+/* General Navbar Styles */
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3.125rem;
+  background-color: #ffffff;
+  z-index: 1000;
+  top: 0;
+  padding: 10px 10px;
+  gap: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.623);
+  width: 100%;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #008888;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffc876;
+  cursor: pointer;
+}
+
+/* Connect Wallet Button */
+
+#button-gradient
+{
+  width: fit-content;
+  height: auto;
+  padding: 10px;
+}
+
+.custom-btn:hover {
+  background: linear-gradient(to right, #ff98e2, #ffc876, #79fff7);
+  color: #121212;
+}
+
+/* Hamburger Menu */
+/* Hamburger Menu */
+#nav-hamburger {
+  width: 40px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 102;
+}
+
+#nav-hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #008888;
+  transition: 0.3s ease-in;
+  position: relative;
+}
+
+/* Cross Style When Open */
+#nav-hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin:center;
+}
+
+#nav-hamburger.open span:nth-child(2) {
+  opacity: 0; /* Hide the middle line */
+}
+
+#nav-hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: center;
+}
+
+
+a:hover
+{
+    background: linear-gradient(to right, #ff98e2, #ffc876, #79fff7);
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    transition: color .2s ease-out;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  color: #006666;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+  z-index: 101;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #006666;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.btn-section
+{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-right: 10px;
+  width: 250px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide navbar links on smaller screens */
+  }
+
+}
