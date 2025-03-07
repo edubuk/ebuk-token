@@ -33,7 +33,7 @@ const Tokenomics = () => {
     <div className='tokenomics'>
     <div className='tokenomics-data'>
 {data.map((data,i)=>
-    <p><span id='tokenomics-dot' style={{backgroundColor:`${data.color}`}}></span>{data.title}</p>
+    <p key={i+1}><span id='tokenomics-dot' style={{backgroundColor:`${data.color}`}}></span>{data.title}</p>
 )}
 </div>
     <div>
@@ -49,7 +49,7 @@ const Tokenomics = () => {
         }}
         radius={35}
         labelPosition={105}
-        style={{width:"500px", height:"500px"}}
+        className='pichart'
       />
 </div>
 </div>

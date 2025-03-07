@@ -61,6 +61,7 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 102;
+  margin-right: 10px;
 }
 
 #nav-hamburger span {
@@ -146,7 +147,6 @@ a:hover
   display: flex;
   justify-content:space-around;
   align-items: center;
-  margin-right: 10px;
   width: 250px;
 }
 

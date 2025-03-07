@@ -10,7 +10,6 @@ import trust from '../../assets/trust.svg';
 import ticsMap from '../../assets/TICSMap.png'
 import tokenReception from '../../assets/token_reception.png'
 import { FaLongArrowAltRight } from "react-icons/fa";
-import Swipelux from "../Swipelux/Swipelux";
 import Tokenomics from "../Tokenomics/Tokenomics";
 import Freatures from "../Features/CVFreature";
 import CETAFeatureCard from "../Features/CetaFeature";
@@ -20,7 +19,7 @@ import InternshipFeatur from "../Features/InternshipFeature";
 export const Home = () => {
   const [progress] = useState(40);
   const [isOpen, setIsOpen] = useState(false);
-  const [openWidget, setOpenWidget] = useState(false);
+
   return (
     <div className="home-container">
       <div className="phase-box">
@@ -147,7 +146,7 @@ export const Home = () => {
           </div>
           <div className="step-container">
             <p><span>Step 2</span>- Enter the amount you would like to purchase</p>
-            <div className="input-container-box">
+            {/* <div className="input-container-box">
               <div className="input-container">
                 <div className="input-box-container">
                   <input type="number" value="1"></input>
@@ -179,9 +178,9 @@ export const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
-          <button className="custom-btn" onClick={() => setOpenWidget(true)}>
+          <button className="custom-btn">
             Connect Wallet
           </button>
           <button className="subtitle">
@@ -190,7 +189,6 @@ export const Home = () => {
         </div>
         <div className="second-section">
           <h1 className="gradient-text" id="how-to-buy">How To Buy</h1>
-          <div id="how-to-buy-para">Buying EDUBK with<br></br><br></br><span id="tokens">USDT</span> <span id="tokens">USDC</span> <span id="tokens">ETH</span> <span id="tokens">BTC</span> <span id="tokens">BNB</span> <span id="tokens">SOL</span></div>
           <div className="second-section-box">
             <div className="step-container">
               <p id="step-label">Step-1 Wallet Setup</p>
@@ -230,76 +228,12 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div className="third-section " id="third-box">
-        <p id="how-to-buy-para">Buying Tics with<br></br>ETH BNB And More</p>
-        <div className="second-section-box">
-        <div className="step-container">
-        <p id="step-label">Step-1 Get Your Wallet Ready</p>
-        <p id="step-welcome">Desktop users, MetaMask is your best bet for ease
-        <br></br>
-        Mobile users, Trust Wallet or MetaMask through Wallet Connect will give you a hassle-free experience.
-        </p>        
-        <div className="wallet-btn">
-          <a>
-            Download
-            <img src={metamask}></img>
-          </a>
-          <a>
-            Download
-            <img src={trust}></img>
-          </a>
-        </div>
-        </div>
-        <div className="second-section">
-        <h1 className="gradient-text" id="how-to-buy">How To Buy</h1>
-        <p id="how-to-buy-para">Buying Tics with<br></br>ETH BNB</p>
-        <div className="second-section-box">
-        <div className="step-container">
-        <p id="step-label">Step-1 Wallet Setup</p>
-        <p id="step-welcome">Welcome aboard! Start by getting MetaMask on your desktop browser or a Wallet Connect-compatible wallet like Trust Wallet for your mobile.
-        <br></br>
-        Desktop users, MetaMask is ideal for a smooth purchase process. Mobile users, Trust Wallet or MetaMask connected through Wallet Connect is your go-to.</p>
-        <div className="wallet-btn">
-          <a>
-            Download
-            <img src={metamask}></img>
-          </a>
-          <a>
-            Download
-            <img src={trust}></img>
-          </a>
-        </div>
-        </div>
-        <div className="step-container">
-        <p id="step-label">Step-2 Sending Your Payment</p>
-        <p id="step-welcome">
-        Choose your desired currency and TICS token amount on our website and click 'Buy Now'. We'll generate a unique QR code and a wallet 
-        address for you to send your payment. Once your transaction is blockchain-confirmed, your purchased TICS tokens will be allocated to 
-        your wallet address, and your balance will reflect your purchase on your dashboard. Keep your transaction ID handy, just in case.
-        <br></br>
-        </p>
-        <div className="tics-crypto-map">
-        <img src={paymentMap} alt="tics-map" id="tics-map"></img>
-        </div>
-        </div>
-        </div>
-        </div>
-        <div className="step-container">
-        <p id="step-label">Step-3 Claiming Your Tokens</p>
-        <p id="step-welcome">
-        After our presale ends, claiming your TICS tokens will be a breeze—you can do it right from our website or receive them through an airdrop. Your dashboard, accessible by connecting your wallet to our site, will show you all your token details and values.
-        </p>
-        <img src={tokenReception} alt="tics-map" id="token-reception"></img>
-        </div>
-        </div>
-        </div> */}
-        <Tokenomics id="tokenomics"/>
+        <Tokenomics id="tokenomics" />
         <Freatures />
         <CETAFeatureCard />
         <OlympiadFeature />
         <InternshipFeatur />
       </div>
-      <Swipelux openWidget={openWidget} onClose={() => setOpenWidget(false)} />
     </div>
   );
 };

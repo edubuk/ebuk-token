@@ -45,14 +45,11 @@ const NavBar = () => {
           </Link>
         ))}
       </div>
-      <div className='btn-section'>
-        {/* <button className="custom-btn" id="button-gradient">Connect Wallet</button> */}
         <div id="nav-hamburger" className={isSidebarOpen ? 'open' : ''} onClick={toggleSidebar}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </div>
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} navData={navData} />
     </nav>
@@ -64,6 +61,12 @@ const Sidebar = ({ isOpen, navData }) => {
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul>
         <img src={logo} alt="logo" className="logo" />
+        <li>
+        <Link to="/" className="nav-link">Home</Link>
+        </li>
+        <li>
+      <a href="/#tokenomics" className="nav-link">Tokenomics</a>
+      </li>
         {navData.map((link, index) => (
           <li key={index}>
             <Link to={link.path}>{link.name}</Link>

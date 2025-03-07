@@ -6,11 +6,13 @@
     row-gap: 5px;
     align-items: center;
     margin-top: 10px;
-    padding: 10px;
+    padding: 20px;
     background-color:  #004280;
     border-radius: 12px;
-   
+    text-align: center;
+    width: 85%;
 }
+
 h1{
     text-align: center;
 }
@@ -41,6 +43,11 @@ h1{
     flex-wrap: wrap;
 }
 
+.pichart{
+    width: 500px;
+    height: 500px;
+}
+
 .tokenomics-supply
 {
     background: linear-gradient(to right,#ff98e2, #ffc876,#79fff7,rgb(255, 174, 0));
@@ -61,4 +68,20 @@ h1{
     padding: 0px 10px;
     border-radius: 50%;
     margin-right: 5px;
+}
+
+@media screen and (max-width:550px){
+    .pichart{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media screen and (max-width:400px){
+    .pichart{
+        width: 300px;
+        height: 300px;
+    }
+    .tokenomics-container{
+        padding: 10px;
+    }
 }

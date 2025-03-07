@@ -9,6 +9,7 @@ const PrivateRoute = () => {
 
     useEffect(()=>{
         const checkAuth = async()=>{
+            try {
             let res = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/auth/user-auth`,{
                 method:"GET",
                 headers:{
@@ -22,7 +23,12 @@ const PrivateRoute = () => {
             }
             else{
                 setOk(false);
+                return;
             }
+        } catch (error) {
+              console.log("error in private route",error);
+              setOk(false);
+        }
         }
         if(auth?.token) checkAuth();
     },[auth?.token])
