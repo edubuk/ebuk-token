@@ -30,12 +30,12 @@ code {
 
 /* Handle (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: #008888; 
+  background:#003866; 
   border-radius: 10px;
 } 
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #006666; 
+  background: #004466; 
 } 
 

@@ -19,6 +19,7 @@ import { MdOutlinePendingActions } from "react-icons/md";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { useState } from "react";
 import Preloader from "./components/Pages/Preloader";
+import BuyToken from "./components/Dashboard/User/BuyToken";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
   const userLinks = [
     { name: "Status", path: "user-status", icon: <BiSolidUserDetail /> },
     { name: "KYC", path: "user-kyc", icon: <LuFileScan /> },
-    { name: "Buy Tokens", path: "buy-token", icon: <RxTokens /> },
+    { name: "Token", path: "buy-token", icon: <RxTokens /> },
   ];
 
   const adminLinks = [
@@ -52,7 +53,7 @@ function App() {
             <Route index element={<UserStatus />} /> {/* Default route */}
             <Route path="user-status" element={<UserStatus />} />
             <Route path="user-kyc" element={<UserKYC />} />
-            <Route path="buy-token" element={<div>Buy Token Page</div>} />
+            <Route path="buy-token" element={<BuyToken />} />
           </Route>
         </Route>
 

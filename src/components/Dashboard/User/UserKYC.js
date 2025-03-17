@@ -19,7 +19,7 @@ const UserKYC = () => {
       
       let data = await fetch(`${BASE_URL}/api/v1/user/create-session`, {
         method: "POST",
-        body: JSON.stringify({ email: auth?.user?.email }),
+        body:JSON.stringify({email:auth?.user?.email}),
         headers: {
           "Content-Type": "application/json",
           'Authorization': auth.token
