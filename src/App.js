@@ -29,7 +29,7 @@ function App() {
   const userLinks = [
     { name: "Status", path: "user-status", icon: <BiSolidUserDetail /> },
     { name: "KYC", path: "user-kyc", icon: <LuFileScan /> },
-    { name: "Token", path: "buy-token", icon: <RxTokens /> },
+    { name: "Buy Token", path: "buy-token", icon: <RxTokens /> },
   ];
 
   const adminLinks = [

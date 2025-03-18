@@ -103,7 +103,7 @@ const BuyToken = () => {
       })
       data = await data.json();
       if (data.success) {
-        toast.success(data.message);
+        toast.success("Payment data submitted successfully.");
         setAmount("");
         setFile("");
         setImagePreview("");

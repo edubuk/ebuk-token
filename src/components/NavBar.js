@@ -16,8 +16,6 @@ const NavBar = () => {
   const navData = [
     { name: 'Whitepaper', path: '/whitepaper' },
     { name: 'Pitch Deck', path: '/pitch-deck' },
-    { name: 'Q&A', path: '/q&a' },
-    { name: 'How To Buy', path: '/htob' },
     { name: 'Dashboard', path: `/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}` },
     { name: `${auth?.user ? "Logout" : "Sign-up"}`, path: '/sign-up' },
   ];
@@ -51,25 +49,25 @@ const NavBar = () => {
           <span></span>
         </div>
       {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} navData={navData} />
+      <Sidebar isOpen={isSidebarOpen} navData={navData} setIsSidebarOpen={setIsSidebarOpen}/>
     </nav>
   );
 };
 
-const Sidebar = ({ isOpen, navData }) => {
+const Sidebar = ({ isOpen, navData,setIsSidebarOpen }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul>
         <img src={logo} alt="logo" className="logo" />
         <li>
-        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/" className="nav-link" onClick={()=>setIsSidebarOpen(false)}>Home</Link>
         </li>
         <li>
-      <a href="/#tokenomics" className="nav-link">Tokenomics</a>
+      <a href="/#tokenomics" className="nav-link" onClick={()=>setIsSidebarOpen(false)}>Tokenomics</a>
       </li>
         {navData.map((link, index) => (
           <li key={index}>
-            <Link to={link.path}>{link.name}</Link>
+            <Link to={link.path} onClick={()=>setIsSidebarOpen(false)}>{link.name}</Link>
           </li>
         ))}
       </ul>
