@@ -113,7 +113,7 @@
     align-items: center;
     width: 100%;
     max-width: 70.5rem;
-    margin-top: -18rem;
+    margin-top: -15rem;
     row-gap: 20px;
 }
 
@@ -189,6 +189,18 @@
     margin-top: 10px;
     border-radius: 0.5rem;
     width: 85%;
+}
+
+.buyer-container>a{
+    padding: 5px 15px;
+    border-radius: 1.2rem;
+    background-color: #004466; 
+    color: #FFD700; 
+    text-decoration: none;
+    border: 1px solid #FFD700;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 .col-1
