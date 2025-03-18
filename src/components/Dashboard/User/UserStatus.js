@@ -57,15 +57,29 @@ const UserStatus = () => {
         //console.log("payment",paymentHistory.data)
         setHistory(paymentHistory.history);
         setPaymentStatus(paymentHistory.message);
-        setIsOpen(true);
+        
       }
     } catch (error) {
       console.log("error while fetching user payment history",error);
     }
   }
 
+  const getHistory = ()=>{
+    if(history.length>0)
+    {
+      setIsOpen(true);
+    }
+    else
+    {
+      getUserPaymentHistory();
+      setIsOpen(true);
+    }
+
+  }
+
   useEffect(() => {
     getStatus();
+    getUserPaymentHistory();
   }, [])
 
   return (
@@ -127,7 +141,7 @@ const UserStatus = () => {
         <GrTransaction id='icon' />
         <h1>Payment</h1>
         <p>Current Status:<strong style={{color:paymentStatus==="Submitted"&&"aqua"}}> {paymentStatus}</strong></p>
-        <button onClick={getUserPaymentHistory}>View History</button>
+        <button onClick={getHistory}>View History</button>
       </div>
       <div className='status-card'>
         <GiToken id='icon' />

@@ -38,6 +38,7 @@ const SignUp = () => {
             setErrors(newErrors); 
             return;
         }
+        const id = toast.loading("Please wait...");
         try {
             let res = await fetch(`${baseUrl}/api/v1/auth/registration`,{
                 method:"POST",
@@ -55,15 +56,18 @@ const SignUp = () => {
             res = await res.json();
             if(res.success)
             {
+                toast.dismiss(id);
                 toast.success(res.message);
                 navigate("/sign-in")
             }
             else if(!res.success)
             {
+                toast.dismiss(id);
                 toast.error(res.message);
             }
             console.log("res",res)
         } catch (error) {
+            toast.dismiss(id);
             toast.error("something went wrong")
             console.log("error while user registration",error)
         }

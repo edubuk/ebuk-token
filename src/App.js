@@ -20,6 +20,7 @@ import { AiOutlineFileDone } from "react-icons/ai";
 import { useState } from "react";
 import Preloader from "./components/Pages/Preloader";
 import BuyToken from "./components/Dashboard/User/BuyToken";
+import Whitepaper from "./components/Pages/Whitepaper";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/whitepaper" element={<Whitepaper />} />
 
         {/* User Dashboard Routes */}
         <Route path="/dashboard" element={<PrivateRoute />}>

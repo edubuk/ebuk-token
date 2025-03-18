@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {motion,AnimatePresence} from 'framer-motion';
 import './Preloader.css'
+import Waves from './../Waves/Waves';
 
 const Preloader = ({onLoaded}) => {
     const [text, setText] = useState("");
@@ -29,6 +30,21 @@ const Preloader = ({onLoaded}) => {
         //eslint-disable-next-line
     },[])
   return (
+    <div className='preloader-container'>
+    <Waves
+                lineColor="#008888"
+                backgroundColor="transparent"
+                waveSpeedX={0.02}
+                waveSpeedY={0.01}
+                waveAmpX={40}
+                waveAmpY={20}
+                friction={0.9}
+                tension={0.01}
+                maxCursorMove={120}
+                xGap={12}
+                yGap={36}
+                style={{ position: "absolute", top: 0, left: 0, zIndex: "-1000", opacity: 0.5 }}
+            />
     <AnimatePresence>
       {visible && (
         <motion.div
@@ -42,6 +58,7 @@ const Preloader = ({onLoaded}) => {
         </motion.div>
       )}
     </AnimatePresence>
+    </div>
   )
 }
 

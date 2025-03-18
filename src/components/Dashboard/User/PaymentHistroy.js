@@ -31,7 +31,7 @@ const PaymentHistroy = ({payments,isOpen,setIsOpen}) => {
                         View
                       </a>
                     </td>
-                    <td>{payment.walletAdd.slice(0,6)}....{payment.walletAdd.slice(-6)}</td>
+                    {payment?.walletAdd&&<td>{payment.walletAdd.slice(0,6)}....{payment.walletAdd.slice(-6)}</td>}
                   </tr>
                 ))}
               </tbody>

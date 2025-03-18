@@ -332,17 +332,31 @@ label {
 
   .payment-page {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
     padding: 20px;
   }
   
   .left-section,
   .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 45%;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    gap: 10px;
+  }
+
+  .payment-details-box{
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+    box-shadow: 0 0 10px white;
+    padding: 5px;
+    border-radius: 0.5rem;
   }
 
   
@@ -360,6 +374,11 @@ label {
   .payment-form {
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 10px white;
+    border-radius: 0.5rem;
+    padding: 40px;
+    margin-top: 30px;
+
   }
   
   .input-field {
@@ -383,6 +402,7 @@ label {
     outline:none ;
     background: none;
     color: white;
+    width: 100%;
   }
   .input-field>input::placeholder {
     color: #ffffff;
@@ -416,6 +436,7 @@ label {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    width: 100%;
   }
 
   .uploading {
@@ -444,6 +465,7 @@ label {
     color: rgb(0, 183, 255);
     font-weight: bold;
   }
+
 
   .file-upload-container {
     display: flex;
@@ -483,11 +505,18 @@ label {
     color:rgb(255, 111, 0);
   }
   
+  .crypto-details{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
   
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     .payment-page {
       flex-direction: column;
       align-items: center;
+      padding: 0px;
     }
   
     .left-section,

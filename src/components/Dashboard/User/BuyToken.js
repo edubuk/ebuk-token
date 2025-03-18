@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaUpload } from 'react-icons/fa';
+import { FaUpload,FaCopy} from 'react-icons/fa';
 import './Dashboard.css';
 import { Link } from 'react-router-dom';
 import { app } from '../../../Firebase/FirebaseConfig'
@@ -123,6 +123,12 @@ const BuyToken = () => {
     }
   }
 
+  const dataCopy = (address ) => {
+      navigator.clipboard.writeText(address)
+      .then(() => toast.success("Data copied!"))
+      .catch(err => toast.error("Failed to copy:", err));
+    };
+
   return (
     <div className='buy-token-container'>
       <div className='info-step-box'>
@@ -150,27 +156,34 @@ const BuyToken = () => {
       <div className="payment-page">
         <div className="left-section">
           <h2>Edubuk Bank Details</h2>
+          <div className='payment-details-box'>
           <p id="indian-payment-details">1. Other than India Location</p>
           <p><span id='bank-detail-title'>Account Holder:</span> Eduprovince Limited</p>
-          <p><span id='bank-detail-title'>IBAN:</span> AE020860000009967368700</p>
-          <p><span id='bank-detail-title'>BIC/SWIFT Code:</span> WIOBAEADXXX</p>
+          <p><span id='bank-detail-title'>IBAN:</span> AE020860000009967368700 <FaCopy onClick={()=>dataCopy("AE020860000009967368700")}/></p>
+          <p><span id='bank-detail-title'>BIC/SWIFT Code:</span> WIOBAEADXXX <FaCopy onClick={()=>dataCopy("WIOBAEADXXX")}/></p>
           <p><span id='bank-detail-title'>Bank Branch Add:</span> ETIHAD AIRWAYS CENTRE, FLOOR 5,AL RAHA BEACH, AL MUNEER, Abu Dhabi, UAE</p>
           <p><span id='bank-detail-title'>Country:</span> UAE</p>
           <p><span id='bank-detail-title'>Edubuk Location:</span> 4th Floor, RAKDAO(Digital Assests Oasis), RAKBANK HQ, RAK,UAE </p>
+          </div>
+          <div className='payment-details-box'>
           <p id="indian-payment-details">2. Only For India Location</p>
           <p><span id='bank-detail-title'>Account Holder:</span> EDUPROVINCE TECHNOLOGIES PVT LTD</p>
-          <p><span id='bank-detail-title'>Account Number:</span> 50200094545351</p>
-          <p><span id='bank-detail-title'>IFSC CODE:</span> HDFC0003788</p>
+          <p><span id='bank-detail-title'>Account Number:</span> 50200094545351 <FaCopy onClick={()=>dataCopy("50200094545351")}/></p>
+          <p><span id='bank-detail-title'>IFSC CODE:</span> HDFC0003788 <FaCopy onClick={()=>dataCopy("HDFC0003788")}/></p>
           <p><span id='bank-detail-title'>Account Type:</span> Current</p>
           <p><span id='bank-detail-title'>Edubuk Location:</span>Accord Blu, Road 10, Banjara Hills, Hyderabad, Telangana, India</p>
-          <p id="indian-payment-details">3. Through Cryptocurrencies<br></br>(Accept only USDT/USDC)</p>
-          <p><span id='bank-detail-title'>EDUPROVINCE LTD Ethereum Wallet Address:</span> 0x5506321B148518FCB47Cb0D69B445172EBD397F5</p>
-          <p><span id='bank-detail-title'>EDUPROVINCE LTD Solana Wallet Address:</span> 74wNZzEjyvGkzKvWbsm5iCTvkssA4RxdcANVxBEYpSmt</p>
+          </div>
+          <div className='payment-details-box'>
+          <p id="indian-payment-details">3. Through Cryptocurrencies<br></br>(Accepts only USDT/USDC on the Polygon, BNB, Ethereum and Solana networks)</p>
+          <p><span id='bank-detail-title'>Edubuk Ethereum/Polygon/BNB Wallet Address:</span> 0xC85c9....46b8A60 <FaCopy onClick={()=>dataCopy("0xC85c9FD1091443563b1f53fa7B92CDbA846b8A60")}/></p>
+          <p><span id='bank-detail-title'>Edubuk Solana Wallet Address:</span> Bjphc86....NX59h2B <FaCopy  onClick={()=>dataCopy("Bjphc86Xgc9P2uvd1rP5J1pLq7ZEuuESs43hbNX59h2B")}/></p>
+          </div>
         </div>
 
         <div className="right-section">
+        <div className="payment-form">
           <h2>Payment Form</h2>
-          <form onSubmit={createPayment} className="payment-form">
+          <form onSubmit={createPayment}>
             <div className="input-field">
               <label htmlFor="payment-method">Choose Payment Method:</label>
               <select id="payment-method" className="dropdown" onChange={(e)=>setSelOption(e.target.value)}>
@@ -233,6 +246,7 @@ const BuyToken = () => {
               Submit
             </button>
           </form>
+          </div>
         </div>
       </div>
     </div>

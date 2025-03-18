@@ -37,6 +37,7 @@ const SignIn = () => {
             setErrors(newErrors); 
             return;
         }
+        const id = toast.loading("Please wait...");
         try {
             let res = await fetch(`${baseUrl}/api/v1/auth/login`,{
                 method:"POST",
@@ -52,6 +53,7 @@ const SignIn = () => {
             res = await res.json();
             if(res.success)
             {
+                toast.dismiss(id);
                 toast.success(res.message);
                 setAuth({...auth,user:res.user,token:res.token});
                 localStorage.setItem("auth", JSON.stringify(res))
@@ -60,9 +62,11 @@ const SignIn = () => {
             else if(!res.success)
             {
                 toast.error(res.message);
+                toast.dismiss(id);
             }
             console.log("res",res)
         } catch (error) {
+            toast.dismiss(id);
             toast.error("something went wrong")
             console.log("error while user registration",error)
         }
