@@ -27,6 +27,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
+    <div className='nav-section'>
       <div className="navbar-left">
         <Link to="/">
           <img src={logo} alt="logo" className="logo" />
@@ -47,6 +48,7 @@ const NavBar = () => {
           <span></span>
           <span></span>
           <span></span>
+        </div>
         </div>
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} navData={navData} setIsSidebarOpen={setIsSidebarOpen}/>

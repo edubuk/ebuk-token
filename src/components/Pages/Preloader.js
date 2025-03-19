@@ -22,7 +22,7 @@ const Preloader = ({onLoaded}) => {
                 setTimeout(()=>{
                     setVisible(false);
                     onLoaded();
-                },1500)
+                },1000)
 
             }
         },50) 

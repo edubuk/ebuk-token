@@ -1,3 +1,11 @@
+.user-details-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 .user-card {
     background: linear-gradient(45deg, #008888, #005d88c2);
     color: #E0E0E0;

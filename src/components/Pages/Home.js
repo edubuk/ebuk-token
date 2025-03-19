@@ -37,10 +37,10 @@ export const Home = () => {
         <div className="buyer-container">
           <div className='info-step-box'>
             <h1 className='loader-text'>How To Purchase EBUK Tokens</h1>
-            <p><strong>Note:</strong> Please complete the KYC before purchasing the EDBUK Tokens.</p>
+            <p><strong>Note:</strong> Please complete the KYC before purchasing the EBUK Tokens.</p>
             <h2>Step 1</h2>            
             <ul>
-              <li>We have 2 method to invest in our EDBUK Token:<br></br> a. Fiat Currency(Only US Doller or Indian Rupee) b. Crypto Currency(Only USDT/USDC)</li>
+              <li>We have 2 method to invest in our EBUK Token:<br></br> a. Fiat Currency(Only US Doller or Indian Rupee) b. Crypto Currency(Only USDT/USDC)</li>
               <li>Use the below payment bank details of Eduprovince Pvt Ltd.</li>
               <li>Use any paymnet gateway/channel and make a payment in any desired amount.</li>
               <li>Current EBUK token price: 1 EBUK = $0.015 or ₹1.32</li>
