@@ -2,24 +2,22 @@
 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 10px;
+    height: 100vh;
 }
 .user-card {
     background: linear-gradient(45deg, #008888, #005d88c2);
     color: #E0E0E0;
-    padding: 20px;
+    padding: 20px 40px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.268) 0px 0px 8px;
-    width: 380px;
+    /* width: 380px; */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
-    /* margin-top: 3.125rem; */
-    margin-left: 20px;
 }
 
 /* User Info */
@@ -116,50 +114,6 @@ h2 {
     padding: 5px 15px;
 }
 
-/* Switch Styling */
-.switch-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 40px;
-}
-
-.switch-on, .switch-off {
-    width: 42px;
-    height: 22px;
-    border-radius: 20px;
-    position: relative;
-    cursor: pointer;
-    transition: background 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2px;
-    border: none;
-}
-
-.switch-on {
-    background-color: #51cd32;
-    justify-content: flex-end;
-    border: none;
-}
-
-.switch-off {
-    background-color: red;
-    border: none;
-}
-
-.switch-thumb {
-    width: 18px;
-    height: 18px;
-    background: #ffffff;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
-
-.switch-on .switch-thumb {
-    transform: translateX(20px);
-}
 
 
 .radio-section{
@@ -170,4 +124,11 @@ h2 {
 }
 .radio-section>input{
     border: 1px solid #008388;
+}
+
+@media screen and (max-width:450px){
+    .user-card
+    {
+        width: 250px;
+    }
 }

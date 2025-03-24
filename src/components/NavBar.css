@@ -6,7 +6,7 @@
   justify-content: space-around;
   height: 3.125rem;
   /* background-color: #ffffff; */
-  z-index: 1000;
+  z-index: 900;
   top: 0;
   padding: 10px 10px;
   gap: 2rem;
@@ -118,7 +118,6 @@ a:hover
     background-clip:text ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: center;
     transition: color .2s ease-out;
 }
 

@@ -21,6 +21,8 @@ import { useState } from "react";
 import Preloader from "./components/Pages/Preloader";
 import BuyToken from "./components/Dashboard/User/BuyToken";
 import Whitepaper from "./components/Pages/Whitepaper";
+import TermsAndConditions from "./components/Legals/TermCond";
+import PrivacyPolicy from "./components/Legals/PrivacyPolicy";
 
 
 function App() {
@@ -33,8 +35,7 @@ function App() {
   ];
 
   const adminLinks = [
-    { name: "Pending Tx", path: "pending-status", icon: <MdOutlinePendingActions /> },
-    { name: "Approved Tx", path: "approved-status", icon: <AiOutlineFileDone /> },
+    { name: "Users Tx", path: "pending-status", icon: <MdOutlinePendingActions /> },
   ];
 
   return (
@@ -48,7 +49,8 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/whitepaper" element={<Whitepaper />} />
-
+        <Route  path="/terms-conditions" element={<TermsAndConditions />}/>
+        <Route  path="/privacy-policy" element={<PrivacyPolicy />}/>
         {/* User Dashboard Routes */}
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard links={userLinks} />}>

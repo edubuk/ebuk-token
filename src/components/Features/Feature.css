@@ -5,7 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #004280;
+    background: linear-gradient(45deg, #008888, #005d88c2);
+
     /* background: linear-gradient(135deg, #79fdff,#008888,#001666); */
     border-radius: 12px;
     /* box-shadow: 0px 5px 15px #ffffff; */
@@ -55,7 +56,8 @@
   }
   
   .problem {
-    background:rgba(102, 255, 102, 0.3);
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    box-shadow: #005580 0px 5px 15px;
   }
 
   .card-statement
@@ -64,7 +66,8 @@
   }
   
   .solution {
-    background: rgba(102, 255, 102, 0.3);
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    box-shadow: #005580 0px 5px 15px;
   }
   
   .benefits {
@@ -122,7 +125,8 @@
   }
   
   .benefit-item {
-    background: rgba(102, 255, 102, 0.3);
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    box-shadow: #005580 0px 5px 15px;
     padding: 8px;
     border-radius: 8px;
     text-align: center;
@@ -142,7 +146,8 @@
     /* box-shadow: 0px 0px 15px #ffffff; */
     padding: 20px;
     margin: 10px;
-    background-color: #004680;
+    background: linear-gradient(45deg, #008888, #005d88c2);
+
   }
   /* Grid container */
 .card-container {
@@ -168,7 +173,8 @@
     color: white;
     padding: 20px;
     border-radius: 15px;
-    background: rgba(102, 255, 102, 0.3);
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    box-shadow: #005580 0px 5px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,7 +209,8 @@
   
   /* Gradient Backgrounds */
   .bg-blue, .bg-purple, .bg-green, .bg-orange, .bg-pink, .bg-dark{
-    background: rgba(102, 255, 102, 0.3);
+    background: linear-gradient(45deg, #008888, #005d88c2);
+    box-shadow: #005580 0px 5px 15px;
   }
   
   /* .bg-purple {

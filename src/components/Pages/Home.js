@@ -12,14 +12,13 @@ export const Home = () => {
   return (
     <div className="home-container">
       <div className="phase-box">
-        <h1 className="gradient-text">Token Presale</h1>
-        <p>Live in</p>
+        <h1 className="gradient-text">EBUK Token</h1>
+        {/* <p>Live in</p> */}
         <div className="timer-div">
           <div id="timer-section">
-            <p>6</p>
-            <p>Days</p>
+            <span className="live-dot"></span><p>Presale Live</p>
           </div>
-          <div id="timer-section">
+          {/* <div id="timer-section">
             <p>12</p>
             <p>Hours</p>
           </div>
@@ -30,14 +29,14 @@ export const Home = () => {
           <div id="timer-section">
             <p>43</p>
             <p>second</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="crypto-data-section">
         <div className="buyer-container">
           <div className='info-step-box'>
             <h1 className='loader-text'>How To Purchase EBUK Tokens</h1>
-            <p><strong>Note:</strong> Please complete the KYC before purchasing the EBUK Tokens.</p>
+            <p><strong>Note:</strong> Please complete your <Link to="/dashboard/user/user-kyc" id="status-link">KYC</Link> before purchasing the EBUK Tokens.</p>
             <h2>Step 1</h2>            
             <ul>
               <li>We have 2 method to invest in our EBUK Token:<br></br> a. Fiat Currency(Only US Doller or Indian Rupee) b. Crypto Currency(Only USDT/USDC)</li>
@@ -53,12 +52,12 @@ export const Home = () => {
             </ul>
             <h2>Step 3</h2>
             <ul>
-              <li>Navigate to the <Link to="/dashboard/user/user-status">status</Link> page.</li>
+              <li>Navigate to the <Link to="/dashboard/user/user-status" id="status-link">status</Link> page.</li>
               <li>All your Payment and Token related status will show there.</li>
               <li>If you have any kind of query or issue, reach out to us : <span>support@edubuk.com</span></li>
             </ul>
           </div>
-          <Link to="/dashboard/user/user-kyc">Buy Now</Link>
+          <Link to="/dashboard/user/user-kyc"> Proceed To Buy EBUK Tokens</Link>
         </div>
         {/* <div className="second-section">
           <h1 className="gradient-text" id="how-to-buy">How To Buy</h1>

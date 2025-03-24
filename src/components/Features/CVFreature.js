@@ -6,7 +6,7 @@ import "./Feature.css";
 
 const CVFeatures = () => {
   return (
-    <div>
+    <div id="vision">
     <h1 className="gradient-text">Why Edubuk ?</h1>
     <div className="solution-card">
       {/* Top Section - Title */}

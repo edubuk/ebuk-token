@@ -1,10 +1,11 @@
 .dashboard-container
 {
     display: flex;
+    flex-direction: column;
+    row-gap: 20px;
     justify-content: flex-start;
     align-items:flex-start;
     margin-top:4.125rem;
-    width: 100vw;
     margin-bottom: 0;
     transition: margin-left 0.3s ease-in-out;
 }
@@ -15,23 +16,19 @@
     align-items: center;
     align-items: center;
     box-shadow: 8px 0px 8px -6px #ffffff;
-    padding-top:20px ;
-    
+    padding-top:20px ;   
 }
 
 .dashboard-links
 {
-    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    padding-left: 10px;
-    padding-top:10px ;
-    row-gap: 20px;
-    height:98vh;
-    left: -200px;
-    min-width: 15%;
-    transition: left 0.3s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #FFFFFF;
+    border-radius: 0.5rem;
+    padding: 10px;
+    width: 95%;
 }
 
 .menu-btn{
@@ -41,6 +38,7 @@
     font-size: 24px;
     cursor: pointer;
 }
+
 .dashboard-links.open {
     left: 0;
     backdrop-filter: blur(10px);
@@ -51,10 +49,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #F4A261;
-    gap: 7px;
-    font-size: 20px;
+    font-size: 18px;
+    background-color: #004466;
+    border: 1px solid #FFC700;
+    color: #FFD700;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    gap: 10px;
+    padding: 5px 10px;
 }
+
+
 
 #dashboard-links
 {
@@ -69,10 +76,11 @@
 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
     flex-wrap: wrap;
     gap: 10px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    height: 100vh;
     /* margin-top: 3.125rem; */
 }
 
@@ -83,7 +91,6 @@
     flex-direction: column;
     width: 300px;
     height: 200px;
-    row-gap: 10px;
     padding: 15px;
     background: linear-gradient(45deg, #008888, #005d88c2);
     box-shadow: rgba(0, 0, 0, 0.268) 0px 0px 8px;
@@ -135,6 +142,7 @@
 .link-component{
     display: flex;
     flex-direction: column;
+    row-gap: 10px;
     justify-content: center;
     align-items: center;
     margin-top: 2.125rem;
@@ -174,7 +182,7 @@
   }
   
   .kyc-container ul {
-    list-style-type: disc; /* Proper bullet points */
+    list-style-type:disc; /* Proper bullet points */
     padding-left: 20px; /* Proper alignment */
     margin: 10px 0;
   }
@@ -236,7 +244,7 @@
     width: 25px;
     height: 25px;
     color: #ffffff;
-  }
+  }     
 
   #indian-payment-details{
     margin-top: 5px;
@@ -318,11 +326,13 @@ label {
     gap: 10px;
   }
 
-
+#status-link{
+  color: #FFD700;
+}
   .info-step-box{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     color: white;
     gap: 10px;

@@ -23,6 +23,7 @@ const BuyToken = () => {
   const [isImageUploading, setIsImageUploading] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
   const [walletAddress, setWalletAddress] = useState("");
+  const [refferalCode, setRefferalCode] = useState("");
   const [auth] = useAuth();
   const [selOption,setSelOption] = useState("INR");
 
@@ -81,7 +82,7 @@ const BuyToken = () => {
 
   const createPayment = async (e) => {
     e.preventDefault();
-    const id = toast.loading("Please wait...")
+    let id;
     try {
       if (!amount) {
         return toast.error("Amount should not be zero");
@@ -92,10 +93,10 @@ const BuyToken = () => {
       if (!file) {
         return toast.error("No file choosen");
       }
-
+      id=toast.loading("Please wait...");
       let data = await fetch(`${BASE_URL}/api/v1/user/create-new-payment`, {
         method: "POST",
-        body: JSON.stringify({ emailId: auth?.user?.email, walletAdd: walletAddress, paidAmount: amount,method:selOption, paymentUrl: imagePreview }),
+        body: JSON.stringify({ emailId: auth?.user?.email, walletAdd: walletAddress, paidAmount: amount,method:selOption, paymentUrl: imagePreview,refferalCode:refferalCode }),
         headers: {
           "Content-Type": "application/json",
           'Authorization': auth?.token
@@ -109,6 +110,7 @@ const BuyToken = () => {
         setImagePreview("");
         setTokenAmount("");
         setWalletAddress("");
+        setRefferalCode("");
         toast.dismiss(id);
       }
       if (!data.success) {
@@ -149,7 +151,7 @@ const BuyToken = () => {
         </ul>
         <h2>Step 3</h2>
         <ul>
-          <li>Navigate to the <Link to="/dashboard/user/user-status">status</Link> page.</li>
+          <li>Navigate to the <Link to="/dashboard/user/user-status" id='status-link'>status</Link> page.</li>
           <li>All your Payment and Token related status will show there.</li>
           <li>If you have any kind of query or issue, reach out to us : <span>support@edubuk.com</span></li>
         </ul>
@@ -158,7 +160,7 @@ const BuyToken = () => {
         <div className="left-section">
           <h2>Edubuk Bank Details</h2>
           <div className='payment-details-box'>
-          <p id="indian-payment-details">1. Other than India Location</p>
+          <p id="indian-payment-details">1. International (outside India)</p>
           <p><span id='bank-detail-title'>Account Holder:</span> Eduprovince Limited</p>
           <p><span id='bank-detail-title'>IBAN:</span> AE020860000009967368700 <FaCopy onClick={()=>dataCopy("AE020860000009967368700")}/></p>
           <p><span id='bank-detail-title'>BIC/SWIFT Code:</span> WIOBAEADXXX <FaCopy onClick={()=>dataCopy("WIOBAEADXXX")}/></p>
@@ -187,7 +189,7 @@ const BuyToken = () => {
           <form onSubmit={createPayment}>
             <div className="input-field">
               <label htmlFor="payment-method">Choose Payment Method:</label>
-              <select id="payment-method" className="dropdown" onChange={(e)=>setSelOption(e.target.value)}>
+              <select id="payment-method" className="dropdown" onChange={(e)=>{setAmount("");setTokenAmount("");setSelOption(e.target.value)}}>
                 <option>INR</option>
                 <option>US Dollar</option>
                 <option>USDC/USDT</option>
@@ -209,7 +211,7 @@ const BuyToken = () => {
                 id="tokenAmount"
                 value={tokenAmount}
                 disabled
-                placeholder="1 EBUK = $0.015"
+                placeholder="1 EBUK = $0.015 or ₹1.32"
               />
             </div>
             <div className="input-field">
@@ -220,6 +222,16 @@ const BuyToken = () => {
                 value={walletAddress}
                 onChange={(e) => setWalletAddress(e.target.value)}
                 placeholder="e.g. 0x1fB9e7...104E"
+              />
+            </div>
+            <div className="input-field">
+              <label htmlFor="tokenAmount">Refferal Code:</label>
+              <input
+                type="text"
+                id="tokenAmount"
+                value={refferalCode}
+                onChange={(e) => setRefferalCode(e.target.value)}
+                placeholder="Enter Refferal Code"
               />
             </div>
 

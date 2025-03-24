@@ -22,19 +22,19 @@ const UserStatus = () => {
   const [paymentStatus,setPaymentStatus]= useState("Not Initialized");
   const getStatus = async () => {
     try {
-      let res = await fetch(`${BASE_URL}/api/v1/user/get-session-status`, {
+      let res = await fetch(`${BASE_URL}/api/v1/user/get-session-status/${auth?.user?.email}`, {
         headers: {
           "Content-Type": "application/json",
-          'Authorization': auth.token
+          'Authorization': auth?.token
         }
       });
       res = await res.json();
       console.log("res", res);
-      if (res.success) {
+      if (res?.success) {
         setStatus({
-          overallStatus: res.status,
-          faceLiveNess: res.steps[0].status,
-          document: res.steps[1].status
+          overallStatus: res?.status,
+          faceLiveNess: res?.steps[0]?.status,
+          document: res?.steps[1]?.status
         })
       }
     } catch (error) {
@@ -52,7 +52,7 @@ const UserStatus = () => {
       });
       paymentHistory = await paymentHistory.json();
       console.log("history",paymentHistory);
-      if(paymentHistory.success)
+      if(paymentHistory?.success)
       {
         //console.log("payment",paymentHistory.data)
         setHistory(paymentHistory.history);
@@ -65,7 +65,7 @@ const UserStatus = () => {
   }
 
   const getHistory = ()=>{
-    if(history.length>0)
+    if(history?.length>0)
     {
       setIsOpen(true);
     }
@@ -108,7 +108,7 @@ const UserStatus = () => {
                             : "black",
               }}
             >
-              {status.faceLiveNess}
+              {status?.faceLiveNess}
             </p>
 
           </div>
@@ -117,25 +117,26 @@ const UserStatus = () => {
             <p
               style={{
                 color:
-                  status.document === "Not Initialized"
+                  status?.document === "Not Initialized"
                     ? "gray"
-                    : status.document === "SUBMISSION_REQUIRED"
+                    : status?.document === "SUBMISSION_REQUIRED"
                       ? "orange"
-                      : status.document === "PENDING_VERIFICATION"
+                      : status?.document === "PENDING_VERIFICATION"
                         ? "blue"
-                        : status.document === "APPROVED"
+                        : status?.document === "APPROVED"
                           ? "green"
-                          : status.document === "Reject"
+                          : status?.document === "Reject"
                             ? "red"
                             : "black",
               }}
             >
-              {status.document}
+              {status?.document}
             </p>
 
           </div>
         </div>
-        <Link to="/dashboard/user/user-kyc" hidden={status.faceLiveNess==="APPROVED" && status.document==="APPROVED"}>{status.faceLiveNess!=="Not Initialized"?"Complete KYC":"Start KYC"}</Link>
+        {(status?.faceLiveNess==="APPROVED" && status?.document==="PENDING_VERIFICATION")&&<p>verification can take max 24hr in bussiness days</p>}
+        {(status?.faceLiveNess==="APPROVED" && status?.document!=="PENDING_VERIFICATION")&&<Link to="/dashboard/user/user-kyc" hidden={status.faceLiveNess==="APPROVED" && status.document==="APPROVED"}>{status.faceLiveNess!=="Not Initialized"?"Complete KYC":"Start KYC"}</Link>}
       </div>
       <div className='status-card'>
         <GrTransaction id='icon' />
@@ -150,7 +151,7 @@ const UserStatus = () => {
         <button>View History</button>
       </div>
     </div>
-    <PaymentHistroy isOpen = {isOpen} setIsOpen={setIsOpen} payments={history}/>
+    <PaymentHistroy isOpen = {isOpen} setIsOpen={setIsOpen} payments={history} email={auth?.user?.email}/>
     </>
   )
 }

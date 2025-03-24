@@ -4,6 +4,7 @@ import {Link, NavLink } from 'react-router-dom';
 import logo from '../assets/EdubukLogoClean.png';
 import { useAuth } from '../context/auth';
 // import { Link } from 'react-scroll';
+import Whitepaper from './Pages/Whitepaper';
 
 
 const NavBar = () => {
@@ -14,9 +15,7 @@ const NavBar = () => {
   };
 
   const navData = [
-    { name: 'Whitepaper', path: '/whitepaper' },
-    { name: 'Pitch Deck', path: '/pitch-deck' },
-    { name: 'Dashboard', path: `/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}` },
+    { name: 'Dashboard', path: `/dashboard/${auth?.user?.role === 1 ? "admin/pending-status" : "user"}` },
     { name: `${auth?.user ? "Logout" : "Sign-up"}`, path: '/sign-up' },
   ];
 
@@ -36,6 +35,8 @@ const NavBar = () => {
       <div className="navbar-links">
       <Link to="/" className="nav-link">Home</Link>
       <a href="/#tokenomics" className="nav-link">Tokenomics</a>
+      <a href="https://drive.google.com/file/d/1EW5mnQg4HLZUoKbCkX2sXMbkV0Dkyknx/view" className="nav-link" target='_blank' rel="noreferrer">PitchDeck</a>
+      <a href="https://drive.google.com/file/d/1gzXdHZHny33XqV-f-DNr7APQwXQWlF-2/view" className="nav-link" target='_blank' rel="noreferrer">Whitepaper</a>
         {navData.map((link, index) => (
           link?.name === 'Dashboard' ? <NavLink key={index} to={link.path} className="nav-link">{link.name}</NavLink> : link.name === "Logout" ? <Link key={index} to="/sign-in" className="nav-link" onClick={logoutHandler}>
             {link.name}
@@ -66,6 +67,12 @@ const Sidebar = ({ isOpen, navData,setIsSidebarOpen }) => {
         </li>
         <li>
       <a href="/#tokenomics" className="nav-link" onClick={()=>setIsSidebarOpen(false)}>Tokenomics</a>
+      </li>
+      <li>
+      <a href="https://drive.google.com/file/d/1EW5mnQg4HLZUoKbCkX2sXMbkV0Dkyknx/view" className="nav-link" target='_blank' rel="noreferrer">PitchDeck</a>
+      </li>
+      <li>
+      <a href="https://drive.google.com/file/d/1gzXdHZHny33XqV-f-DNr7APQwXQWlF-2/view" className="nav-link" target='_blank' rel="noreferrer">Whitepaper</a>
       </li>
         {navData.map((link, index) => (
           <li key={index}>

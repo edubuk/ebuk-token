@@ -7,13 +7,41 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 const SignUp = () => {
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
+    const [otp, setOtp] = useState("");
+    const [isOtpSent,setIsOtpSend]=useState(false);
     const [inputData, setInputData] = useState({
-        "userName": "",
+        "Your Name": "",
         "email": "",
-        "phoneNumber": "",
+        "phone with ISD Code": "",
         "country": "",
         "password": ""
     })
+
+    const sendOtp = async(e)=>{
+        try {
+            e.preventDefault();
+            let res = await fetch(`${baseUrl}/api/v1/auth/send-otp`,{
+                method:"POST",
+                body:JSON.stringify({
+                    email:inputData.email,
+                  }),
+                headers:{
+                    "Content-Type": "application/json",
+                }
+            }
+            );
+            res = await res.json();
+            console.log("res",res);
+            if(res.success)
+            {
+                setIsOtpSend(true);
+                toast.success(res.message);
+            }
+        } catch (error) {
+            console.log("error while sending otp");
+            toast.error("something went wrong");
+        }
+    }
 
     const handlerChange = (e) => {
         e.preventDefault();
@@ -38,16 +66,22 @@ const SignUp = () => {
             setErrors(newErrors); 
             return;
         }
+        let emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+        if(emailReg.test(inputData.email)===false)
+        {
+            return setErrors({email:"Please input a valid email"});
+        }
         const id = toast.loading("Please wait...");
         try {
             let res = await fetch(`${baseUrl}/api/v1/auth/registration`,{
                 method:"POST",
                 body:JSON.stringify({
-                    name:inputData.userName,
+                    name:inputData['Your Name'],
                     email:inputData.email,
-                    phoneNumber:inputData.phoneNumber,
+                    phoneNumber:inputData['phone with ISD Code'],
                     country:inputData.country,
-                    password:inputData.password
+                    password:inputData.password,
+                    otp:otp
                   }),
                 headers:{
                     "Content-Type": "application/json",
@@ -91,7 +125,7 @@ const SignUp = () => {
                 style={{ position: "absolute", top: 0, left: 0, zIndex: "-1000", opacity: 0.5 }}
             />
             {/* <img src={logo}></img> */}
-            <div className='sign-up-container'>
+            {!isOtpSent&&<div className='sign-up-container'>
                 <h1>Sign-Up</h1>
                 {
                     Object.keys(inputData).map((key) => (
@@ -107,9 +141,20 @@ const SignUp = () => {
                         </>
                     ))
                 }
-                <button onClick={registerHandler}>Register</button>
+                <button onClick={sendOtp}>Register</button>
                 <p>Already Registered ? <Link to="/sign-in" style={{ color: "#FFD700" }}>sign-in</Link></p>
-            </div>
+            </div>}
+            {isOtpSent&&<div className='sign-up-container'>
+            <h1>Verify Email</h1>
+                <p>We have sent otp to your email. Please check your email</p>
+               
+                            <input type="string"
+                                value={otp}
+                                placeholder="Enter your otp"
+                                onChange={(e)=>setOtp(e.target.value)}
+                            ></input>
+                <button onClick={registerHandler}>Submit</button>
+            </div>}
         </div>
     </>
     )

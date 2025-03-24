@@ -14,29 +14,20 @@ const Dashboard = ({ links }) => {
 
   return (
     <div className="dashboard-container">
-      {/* Sidebar */}
-      <div className='dashboard-links-section'>
-        <button className="menu-btn" onClick={toggleSidebar}>
-          <CgMenuGridO />
-        </button>
-        <div className={`dashboard-links ${isOpen ? 'open' : 'closed'}`}>
-          {isOpen && <div className="overlay" onClick={() => setIsOpen(false)}></div>}
-          {links.map((link, i) => (
-            <div className="link-container" key={i}>
-              {link.icon}
-              <NavLink to={link.path} id="dashboard-links" onClick={() => setIsOpen(false)}>
-                {link.name}
-              </NavLink>
-            </div>
-          ))}
-        </div>
-
-      </div>
-
       {/* Main Content */}
       <div className="link-component">
         <div className="user-header">
           {auth?.user && <p>Welcome <strong id='user-name'>{auth?.user.name}</strong></p>}
+        </div>
+        <div className='dashboard-links'>
+          {links.map((link, i) => (
+            <div className="link-container" key={i}>
+              {link.icon}
+              <NavLink to={link.path} id="dashboard-links">
+                {link.name}
+              </NavLink>
+            </div>
+          ))}
         </div>
         <Outlet />
       </div>
