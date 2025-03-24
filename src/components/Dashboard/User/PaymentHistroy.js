@@ -3,6 +3,7 @@ import './Dashboard.css'
 import { FaCopy } from 'react-icons/fa'
 import { useAuth } from '../../../context/auth';
 import toast from 'react-hot-toast';
+import { FaRegCheckCircle } from "react-icons/fa";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const PaymentHistroy = ({ payments, isOpen, setIsOpen, email }) => {
@@ -65,6 +66,7 @@ const PaymentHistroy = ({ payments, isOpen, setIsOpen, email }) => {
                                             <th>Payment URL</th>
                                             <th>Wallet Address</th>
                                             {(auth?.user.role === 1) && <th>Verify</th>}
+                                            {(auth?.user.role === 0) && <th>Status</th>}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -85,6 +87,9 @@ const PaymentHistroy = ({ payments, isOpen, setIsOpen, email }) => {
                                                         onChange={() => handleCheckboxChange(index, payment.paymentUrl)}
                                                     />
                                                 </td>}
+                                                <td>
+                                                    {payment?.isPaymentVerified?<FaRegCheckCircle />:"Pending"}
+                                                </td>
                                             </tr>
                                         ))}
                                     </tbody>
