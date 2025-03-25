@@ -33,15 +33,28 @@ export const Home = () => {
         </div>
       </div>
       <div className="crypto-data-section">
+        <div className="video-container">
+          <iframe
+            width="600"
+            height="315"
+            src="https://www.youtube.com/embed/5Cb6g7EEzAk?si=ILTH6o_E9nirqOr3&autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+
+        </div>
         <div className="buyer-container">
           <div className='info-step-box'>
             <h1 className='loader-text'>How To Purchase EBUK Tokens</h1>
             <p><strong>Note:</strong> Please complete your <Link to="/dashboard/user/user-kyc" id="status-link">KYC</Link> before purchasing the EBUK Tokens.</p>
-            <h2>Step 1</h2>            
+            <h2>Step 1</h2>
             <ul>
-              <li>We have 2 method to invest in our EBUK Token:<br></br> a. Fiat Currency(Only US Doller or Indian Rupee) b. Crypto Currency(Only USDT/USDC)</li>
-              <li>Use the below payment bank details of Eduprovince Pvt Ltd.</li>
-              <li>Use any paymnet gateway/channel and make a payment in any desired amount.</li>
+              <li>We have 2 method to invest in our EBUK Token:<br></br> a. Fiat Currency (Only US Doller or Indian Rupee) b. Crypto Currency (Only USDT/USDC)</li>
+              <li>Navigate to <Link to="/dashboard/user" id="status-link">Dashboard</Link> to buy token and use payment bank details of Eduprovince Pvt Ltd.</li>
+              <li>Use your any paymnet gateway/channel and make a payment in any desired amount.</li>
               <li>Current EBUK token price: 1 EBUK = $0.015 or ₹1.32</li>
             </ul>
             <h2>Step 2</h2>
@@ -102,7 +115,32 @@ export const Home = () => {
         </div> */}
         <Tokenomics id="tokenomics" />
         <Freatures />
+        <div className="video-container">
+          <iframe
+            width="600"
+            height="315"
+            src="https://www.youtube.com/embed/CsrP58BXpTA?si=bfbQrsQAl51VJKPd&autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
         <CETAFeatureCard />
+        <div className="video-container">
+          <iframe
+            width="600"
+            height="315"
+            src="https://www.youtube.com/embed/fL4GB7rie54?si=lArzvbR6h4vLfQcg&autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+
+        </div>
         <OlympiadFeature />
         <InternshipFeatur />
       </div>

@@ -13,8 +13,8 @@ const CETAFeatureCard = () => {
         <div className="card-content">
           <FaRobot className="icon" />
           <div>
-            <h2 className="card-title">Emerging Technologies Covered</h2>
-            <p className="card-description">
+            <h2>Emerging Technologies Covered</h2>
+            <p>
               AI, Blockchain, Data Analytics, Cloud Computing, MERN Stack, Python, Java & more.
             </p>
           </div>
@@ -25,8 +25,8 @@ const CETAFeatureCard = () => {
         <div className="card-content">
           <FaLaptopCode className="icon" />
           <div>
-            <h2 className="card-title">No Prior Coding Required</h2>
-            <p className="card-description">
+            <h2>No Prior Coding Required</h2>
+            <p>
               Learn with AI-driven No-Code/Low-Code platforms like ChatGPT, MidJourney & more.
             </p>
           </div>
@@ -37,8 +37,8 @@ const CETAFeatureCard = () => {
         <div className="card-content">
           <MdWork className="icon" />
           <div>
-            <h2 className="card-title">Employment & Internship Support</h2>
-            <p className="card-description">
+            <h2>Employment & Internship Support</h2>
+            <p>
               Linked with job opportunities, internships & placement assistance.
             </p>
           </div>
@@ -49,8 +49,8 @@ const CETAFeatureCard = () => {
         <div className="card-content">
           <FaUsers className="icon" />
           <div>
-            <h2 className="card-title">Soft Skills & Career Development</h2>
-            <p className="card-description">
+            <h2>Soft Skills & Career Development</h2>
+            <p>
               CV building, interview skills & communication workshops.
             </p>
           </div>
@@ -61,8 +61,8 @@ const CETAFeatureCard = () => {
         <div className="card-content">
           <MdSchool className="icon" />
           <div>
-            <h2 className="card-title">75% Hands-On Learning</h2>
-            <p className="card-description">
+            <h2>75% Hands-On Learning</h2>
+            <p>
               Live projects with real-world use cases in various industries.
             </p>
           </div>
@@ -73,8 +73,8 @@ const CETAFeatureCard = () => {
         <div className="card-content">
           <FaCertificate className="icon" />
           <div>
-            <h2 className="card-title">NSDC Certified</h2>
-            <p className="card-description">
+            <h2>NSDC Certified</h2>
+            <p>
               Receive recognized certifications in emerging technologies.
             </p>
           </div>

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './NavBar.css';
 import {Link, NavLink } from 'react-router-dom';
-import logo from '../assets/EdubukLogoClean.png';
+import logo from '../assets/EdubukLogo.png';
 import { useAuth } from '../context/auth';
-// import { Link } from 'react-scroll';
-import Whitepaper from './Pages/Whitepaper';
+
 
 
 const NavBar = () => {

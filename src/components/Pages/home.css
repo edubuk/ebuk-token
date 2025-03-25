@@ -840,6 +840,23 @@
     margin-top: 1.25rem;
 }
 
+.video-container {
+    position: relative;
+    width: 100%; /* Full width of the parent container */
+    max-width: 800px; /* Set a max-width if needed */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    margin: auto; /* Centering the video */
+    border: 4px solid #79baff;
+    border-radius: 0.5rem;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Optional: Removes the border */
+  }
+  
+
 @media screen and (max-width:750px){
     .phase-box
 {

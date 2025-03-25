@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import logo from '../../assets/EdubukLogoClean.png';
+import logo from '../../assets/EdubukLogo.png';
 import twitter from '../../assets/twitter.svg';
 import telegram from '../../assets/telegram.svg';
 import youtube from '../../assets/youtube.svg';

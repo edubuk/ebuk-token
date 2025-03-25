@@ -15,8 +15,8 @@ const OlympiadFeature = () => {
         <div className="card-content">
           <FaBrain className="icon" />
           <div>
-            <h2 className="card-title">Acquire Fundamental Knowledge of:</h2>
-            <p className="card-description">
+            <h2>Acquire Fundamental Knowledge of:</h2>
+            <p>
               1. Artificial Intelligence <br />
               2. Blockchain <br />
               3. Cybersecurity <br />
@@ -31,8 +31,8 @@ const OlympiadFeature = () => {
         <div className="card-content">
           <BsBlockquoteLeft className="icon" />
           <div>
-            <h2 className="card-title">Concept by Experts</h2>
-            <p className="card-description">
+            <h2>Concept by Experts</h2>
+            <p>
               IIT, IIM Alumni, CFA Charterholder, Gold Medalist, Emerging Technologies Consultant, 
               ex-Professors from India & UAE.
             </p>
@@ -45,8 +45,8 @@ const OlympiadFeature = () => {
         <div className="card-content">
           <FaGraduationCap className="icon" />
           <div>
-            <h2 className="card-title">Launching 1st Time in India</h2>
-            <p className="card-description">
+            <h2>Launching 1st Time in India</h2>
+            <p>
               Open for Classes 7th to 12th (Students from All Streams are Eligible).
             </p>
           </div>
@@ -58,8 +58,8 @@ const OlympiadFeature = () => {
         <div className="card-content">
           <FaAward className="icon" />
           <div>
-            <h2 className="card-title">Awards to be Won!</h2>
-            <p className="card-description">
+            <h2 >Awards to be Won!</h2>
+            <p>
               Exciting Prizes, Certificates, Medals for Outstanding Achievements.
             </p>
           </div>
