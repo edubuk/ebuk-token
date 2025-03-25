@@ -88,7 +88,7 @@ const PaymentHistroy = ({ payments, isOpen, setIsOpen, email }) => {
                                                     />
                                                 </td>}
                                                 <td>
-                                                    {payment?.isPaymentVerified?<FaRegCheckCircle />:"Pending"}
+                                                    {(auth?.user?.role === 0) &&payment?.isPaymentVerified?<FaRegCheckCircle />:"Pending"}
                                                 </td>
                                             </tr>
                                         ))}
