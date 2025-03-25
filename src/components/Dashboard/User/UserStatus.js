@@ -139,7 +139,7 @@ const UserStatus = () => {
         </div>
         {(status?.faceLiveNess==="APPROVED" && status?.document==="PENDING_VERIFICATION")&&<p>Verification can take up to 24 hours on business days</p>}
         {(status?.faceLiveNess==="APPROVED" && status?.document!=="PENDING_VERIFICATION")&&<Link to="/dashboard/user/user-kyc" hidden={status.faceLiveNess==="APPROVED" && status.document==="APPROVED"}>{status.faceLiveNess!=="Not Initialized"?"Complete KYC":"Start KYC"}</Link>}
-        {(status.faceLiveNess==="APPROVED" && status.document==="APPROVED")&&<MdOutlineVerified className="verified-icon"/>}
+        {<MdOutlineVerified className="verify-icon"/>}
       </div>
       <div className='status-card'>
         <GrTransaction id='icon' />

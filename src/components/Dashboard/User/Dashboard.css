@@ -244,7 +244,14 @@
     width: 25px;
     height: 25px;
     color: #ffffff;
-  }     
+  }  
+  
+  .verify-icon {
+    color: #99cd32; /* Green */
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+}
 
   #indian-payment-details{
     margin-top: 5px;
