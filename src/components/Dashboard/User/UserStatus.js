@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { MdPersonSearch } from "react-icons/md";
 import { FaRegIdCard } from "react-icons/fa6";
 import { useAuth } from '../../../context/auth';
+import { MdOutlineVerified } from "react-icons/md";
 import PaymentHistroy from './PaymentHistroy';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -80,7 +81,8 @@ const UserStatus = () => {
   useEffect(() => {
     getStatus();
     getUserPaymentHistory();
-  }, [])
+    
+  }, [getStatus, getUserPaymentHistory])
 
   return (
     <>
@@ -135,8 +137,9 @@ const UserStatus = () => {
 
           </div>
         </div>
-        {(status?.faceLiveNess==="APPROVED" && status?.document==="PENDING_VERIFICATION")&&<p>verification can take max 24hr in bussiness days</p>}
+        {(status?.faceLiveNess==="APPROVED" && status?.document==="PENDING_VERIFICATION")&&<p>Verification can take up to 24 hours on business days</p>}
         {(status?.faceLiveNess==="APPROVED" && status?.document!=="PENDING_VERIFICATION")&&<Link to="/dashboard/user/user-kyc" hidden={status.faceLiveNess==="APPROVED" && status.document==="APPROVED"}>{status.faceLiveNess!=="Not Initialized"?"Complete KYC":"Start KYC"}</Link>}
+        {(status.faceLiveNess==="APPROVED" && status.document==="APPROVED")&&<MdOutlineVerified className="verified-icon"/>}
       </div>
       <div className='status-card'>
         <GrTransaction id='icon' />
