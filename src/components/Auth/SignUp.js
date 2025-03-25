@@ -18,9 +18,10 @@ const SignUp = () => {
     })
 
     const sendOtp = async (e) => {
+        let id;
         try {
             e.preventDefault();
-            let emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+            let emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (emailReg.test(inputData.email) === false) {
                 return setErrors({ email: "Please input a valid email" });
             }
@@ -36,6 +37,7 @@ const SignUp = () => {
                 setErrors(newErrors);
                 return;
             }
+            id=toast.loading("Please wait...");
             let res = await fetch(`${baseUrl}/api/v1/auth/send-otp`, {
                 method: "POST",
                 body: JSON.stringify({
@@ -49,10 +51,12 @@ const SignUp = () => {
             res = await res.json();
             console.log("res", res);
             if (res.success) {
+                toast.dismiss(id);
                 setIsOtpSend(true);
                 toast.success(res.message);
             }
         } catch (error) {
+            toast.dismiss(id);
             console.log("error while sending otp");
             toast.error("something went wrong");
         }
