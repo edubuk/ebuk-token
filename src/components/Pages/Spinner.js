@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './spinner.css'
 import { useNavigate,useLocation } from 'react-router-dom';
-const Spinner = ({path="sign-in"}) => {
+const Spinner = ({path}) => {
     const [count, setCount] = useState(5);
     const navigate = useNavigate();
     const location = useLocation();
@@ -20,7 +20,6 @@ const Spinner = ({path="sign-in"}) => {
     <h1>Redirecting to you in {count} second</h1>
       <div className="spinner-3"></div>
     </div>
-    
   )
 }
 

@@ -27,7 +27,7 @@ const AdminRoute = () => {
         }
         if(auth?.token) checkAuth();
     },[auth?.token])
-  return ok?<Outlet />:<Spinner path="" />
+  return ok?<Outlet />:<Spinner path="sign-up" />
 }
 
 export default AdminRoute

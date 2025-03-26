@@ -80,3 +80,23 @@
     font-size: 12px;
     margin-top: -15px;
   }
+
+  .button-handler{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10p;
+  }
+
+  .resend-otp-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .otp-btn{
+    border: none;
+    background: transparent;
+    
+  }

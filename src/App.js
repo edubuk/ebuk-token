@@ -16,11 +16,9 @@ import { BiSolidUserDetail } from "react-icons/bi";
 import { LuFileScan } from "react-icons/lu";
 import { RxTokens } from "react-icons/rx";
 import { MdOutlinePendingActions } from "react-icons/md";
-import { AiOutlineFileDone } from "react-icons/ai";
 import { useState } from "react";
 import Preloader from "./components/Pages/Preloader";
 import BuyToken from "./components/Dashboard/User/BuyToken";
-import Whitepaper from "./components/Pages/Whitepaper";
 import TermsAndConditions from "./components/Legals/TermCond";
 import PrivacyPolicy from "./components/Legals/PrivacyPolicy";
 
@@ -48,7 +46,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/whitepaper" element={<Whitepaper />} />
         <Route  path="/terms-conditions" element={<TermsAndConditions />}/>
         <Route  path="/privacy-policy" element={<PrivacyPolicy />}/>
         {/* User Dashboard Routes */}

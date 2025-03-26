@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Auth.css'
 import Waves from '../Waves/Waves.jsx'
 import { Link, useNavigate } from 'react-router-dom'
@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 const SignUp = () => {
     const [errors, setErrors] = useState({});
+    const [count,setCount] = useState(15);
     const navigate = useNavigate();
     const [otp, setOtp] = useState("");
     const [isOtpSent, setIsOtpSend] = useState(false);
@@ -107,7 +108,12 @@ const SignUp = () => {
         }
     }
 
-
+    useEffect(()=>{
+        const interval = setInterval(()=>{
+            setCount((prev)=>--prev)
+        },1000);
+        return ()=> clearInterval(interval);
+    },[count])
     return (<>
         <div className='auth-container'>
             <Waves
@@ -146,13 +152,18 @@ const SignUp = () => {
             </div>}
             {isOtpSent && <div className='sign-up-container'>
                 <h1>Verify Email</h1>
-                <p>We have sent otp to your email. Please check your email</p>
+                <p>We have sent OTP to {inputData.email}. Please check your email</p>
                 <input type="string"
                     value={otp}
                     placeholder="Enter your otp"
                     onChange={(e) => setOtp(e.target.value)}
                 ></input>
+                <div className='button-handler'>
                 <button onClick={registerHandler}>Submit</button>
+                <div className='resend-otp-box'>
+                {/* <button onClick={sendOtp} disabled={count!==0} className='otp-btn'>Resend OTP</button><p> after {count}</p> */}
+                </div>
+                </div>
             </div>}
         </div>
     </>

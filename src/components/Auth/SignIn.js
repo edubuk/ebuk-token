@@ -57,7 +57,7 @@ const SignIn = () => {
                 toast.success(res.message);
                 setAuth({...auth,user:res.user,token:res.token});
                 localStorage.setItem("auth", JSON.stringify(res))
-                navigate("/")
+                navigate("/dashboard/user")
             }
             else if(!res.success)
             {
