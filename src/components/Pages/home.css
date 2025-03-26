@@ -226,6 +226,9 @@
     text-align: center;
     width: 100%;
 }
+.info-step-box>h2{
+    text-align:start
+}
 
 .col-1
 {
