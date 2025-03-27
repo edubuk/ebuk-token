@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Dashboard.css'
 import { NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../../../context/auth'
-import { CgMenuGridO } from "react-icons/cg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Dashboard = ({ links }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,12 @@ const Dashboard = ({ links }) => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+        AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
+      }, []);
+
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container" data-aos="fade-left">
       {/* Main Content */}
       <div className="link-component">
         <div className="user-header">

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './NavBar.css';
 import {Link, NavLink } from 'react-router-dom';
 import logo from '../assets/EdubukLogo.png';
 import { useAuth } from '../context/auth';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const NavBar = () => {
@@ -14,8 +15,10 @@ const NavBar = () => {
   };
 
   const navData = [
+    {name:"Utility of EBUK Tokens",path:"/ebuk-utility"},
     { name: 'Dashboard', path: `/dashboard/${auth?.user?.role === 1 ? "admin/pending-status" : "user"}` },
     { name: `${auth?.user ? "Logout" : "Sign-up"}`, path: '/sign-up' },
+
   ];
 
   const logoutHandler = () => {
@@ -23,8 +26,12 @@ const NavBar = () => {
     localStorage.removeItem("auth");
   }
 
+  useEffect(() => {
+      AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
+    }, []);
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" data-aos="fade-right">
     <div className='nav-section'>
       <div className="navbar-left">
         <Link to="/">

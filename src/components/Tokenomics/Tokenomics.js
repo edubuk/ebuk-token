@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './tokenomic.css'
 import { PieChart } from 'react-minimal-pie-chart';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Tokenomics = () => {
 
@@ -20,9 +22,13 @@ const Tokenomics = () => {
         { title: "Treasury", value: 7, color: "#90C8E6" },  
         { title: "Liquidity", value: 7, color: "rgb(0, 115, 245)" },  
       ];
+
+        useEffect(() => {
+          AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
+        }, []);
       
   return (
-    <div className='tokenomics-container' id="tokenomics">
+    <div className='tokenomics-container' id="tokenomics" data-aos="fade-left">
     <div>
         <h1 className="gradient-text" id="how-to-buy">Edubuk "EBUK" Tokenomics</h1>
     </div>

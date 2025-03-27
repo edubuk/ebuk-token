@@ -1,0 +1,27 @@
+.utility-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3.25rem;
+    padding: 10px;
+}
+
+.utility-container>img{
+    max-width: 80%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+.paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.paragraph>p{
+    line-height: 1.5;
+    font-size: 20px;
+}

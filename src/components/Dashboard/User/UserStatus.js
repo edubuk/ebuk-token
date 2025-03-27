@@ -8,6 +8,8 @@ import { FaRegIdCard } from "react-icons/fa6";
 import { useAuth } from '../../../context/auth';
 import { MdOutlineVerified } from "react-icons/md";
 import PaymentHistroy from './PaymentHistroy';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -84,9 +86,13 @@ const UserStatus = () => {
     
   }, [getStatus, getUserPaymentHistory])
 
+  useEffect(() => {
+      AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
+    }, []);
+
   return (
     <>
-    <div className='dashboard-menu-container'>
+    <div className='dashboard-menu-container' data-aos="fade-down">
       <div className='status-card'>
         <HiOutlineDocumentSearch id='icon' />
         <h1>KYC</h1>

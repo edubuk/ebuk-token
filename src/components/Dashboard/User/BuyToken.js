@@ -93,6 +93,9 @@ const BuyToken = () => {
       if (!file) {
         return toast.error("No file choosen");
       }
+      if (!refferalCode) {
+        return toast.error(" Please enter referral code. Please enter N/A if you don't have one");
+      }
       id = toast.loading("Please wait...");
       let data = await fetch(`${BASE_URL}/api/v1/user/create-new-payment`, {
         method: "POST",
@@ -165,6 +168,7 @@ const BuyToken = () => {
           → Eduprovince Limited (for international transfers)<br></br>
           → Eduprovince Technologies Private Limited (for Indian transfers)<br></br>
           <li>Fill out the payment form with the amount paid.</li>
+          <li>Enter the Referral Code Provided to You (Enter N/A if you don't have one).</li>
           <li>Upload the payment confirmation (image or PDF) and click 'Submit'.</li>
         </ul>
         <h2>Step 4: Track Your Status and Token Transfer</h2>
@@ -249,13 +253,13 @@ const BuyToken = () => {
                 />
               </div>
               <div className="input-field">
-                <label htmlFor="tokenAmount">Refferal Code:</label>
+                <label htmlFor="tokenAmount">Referral Code (Enter N/A if you don't have one)*</label>
                 <input
                   type="text"
                   id="tokenAmount"
                   value={refferalCode}
                   onChange={(e) => setRefferalCode(e.target.value)}
-                  placeholder="Enter Refferal Code"
+                  placeholder="Enter Referral Code"
                 />
               </div>
 

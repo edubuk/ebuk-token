@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './home.css'
 import Tokenomics from "../Tokenomics/Tokenomics";
 import Freatures from "../Features/CVFreature";
@@ -6,34 +6,29 @@ import CETAFeatureCard from "../Features/CetaFeature";
 import OlympiadFeature from "../Features/OlympiadFeature";
 import InternshipFeatur from "../Features/InternshipFeature";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Home = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
+  }, []);
 
   return (
     <div className="home-container">
       <div className="phase-box">
+      <div data-aos="fade-down">
         <h1 className="gradient-text">EBUK Token</h1>
-        {/* <p>Live in</p> */}
         <div className="timer-div">
           <div id="timer-section">
             <span className="live-dot"></span><p>Presale Live</p>
           </div>
-          {/* <div id="timer-section">
-            <p>12</p>
-            <p>Hours</p>
-          </div>
-          <div id="timer-section">
-            <p>30</p>
-            <p>Minutes</p>
-          </div>
-          <div id="timer-section">
-            <p>43</p>
-            <p>second</p>
-          </div> */}
+        </div>
         </div>
       </div>
       <div className="crypto-data-section">
-        <div className="video-container">
+        <div className="video-container" data-aos="fade-up">
           <iframe
             width="600"
             height="315"
@@ -46,7 +41,7 @@ export const Home = () => {
           </iframe>
 
         </div>
-        <div className="buyer-container">
+        <div className="buyer-container" data-aos="fade-up">
           <div className='info-step-box'>
             <h1 className='gradient-text'>How To Purchase EBUK Tokens</h1>
             {/* <p><strong>Note:</strong> Please complete your <Link to="/dashboard/user/user-kyc" id="status-link">KYC</Link> before purchasing the EBUK Tokens.</p> */}
@@ -85,6 +80,7 @@ export const Home = () => {
               → Eduprovince Limited (for international transfers)<br></br>
               → Eduprovince Technologies Private Limited (for Indian transfers)<br></br>
               <li>Fill out the payment form with the amount paid.</li>
+              <li>Enter the Referral Code Provided to You (Enter N/A if you don't have one).</li>
               <li>Upload the payment confirmation (image or PDF) and click 'Submit'.</li>
             </ul>
             <h2>Step 5: Track Your Status and Token Transfer</h2>
@@ -101,6 +97,22 @@ export const Home = () => {
             </ul>
           </div>
           <Link to="/dashboard/user/user-kyc"> Proceed To Buy EBUK Tokens</Link>
+        </div>
+        <div className="buyer-container" data-aos="fade-right">
+        <div className='info-step-box'>
+        <h1 className='gradient-text'>Staking Mechanism (Post Listing)</h1>
+          <p>
+Prior to the token’s public listing, Edubuk will announce a staking mechanism available to all token holders. Key highlights:<br></br>
+
+1. Investors will be able to stake their EBUK tokens on Edubuk’s platform.<br></br>
+
+2. The staking offers an Annual Percentage Yield (APY) of 10%.<br></br>
+
+3. The staking program will include a maximum cap on absolute staking rewards per user.<br></br>
+
+4. Staking details, including reward limits and lock-in periods (if any), will be announced prior to the listing.
+          </p>
+        </div>
         </div>
         {/* <div className="second-section">
           <h1 className="gradient-text" id="how-to-buy">How To Buy</h1>
@@ -143,8 +155,10 @@ export const Home = () => {
             </div>
           </div>
         </div> */}
-        <Tokenomics id="tokenomics" />
+        <Tokenomics />
+        <div data-aos="fade-down">
         <Freatures />
+        </div>
         <div className="video-container">
           <iframe
             width="600"
