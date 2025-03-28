@@ -15,7 +15,7 @@ const NavBar = () => {
   };
 
   const navData = [
-    {name:"Utility of EBUK Token",path:"/ebuk-utility"},
+
     { name: 'Dashboard', path: `/dashboard/${auth?.user?.role === 1 ? "admin/pending-status" : "user"}` },
     { name: `${auth?.user ? "Logout" : "Sign-up"}`, path: '/sign-up' },
 
@@ -81,11 +81,7 @@ const Sidebar = ({ isOpen, navData,setIsSidebarOpen,logoutHandler={logoutHandler
       <a href="https://drive.google.com/file/d/1gzXdHZHny33XqV-f-DNr7APQwXQWlF-2/view" className="nav-link" target='_blank' rel="noreferrer">Whitepaper</a>
       </li>
         {navData.map((link, index) => (
-          link?.name === 'Dashboard' ? <NavLink key={index} to={link.path} className="nav-link">{link.name}</NavLink> : link.name === "Logout" ? <Link key={index} to="/sign-in" className="nav-link" onClick={logoutHandler}>
-            {link.name}
-          </Link> : <Link key={index} to={link.path} className="nav-link">
-            {link.name}
-          </Link>
+          link?.name === 'Dashboard' ? <li><NavLink key={index} to={link.path} className="nav-link">{link.name}</NavLink></li> : link.name === "Logout" ? <li><Link key={index} to="/sign-in" className="nav-link" onClick={logoutHandler}>{link.name}</Link></li> : <li><Link key={index} to={link.path} className="nav-link">{link.name}</Link></li>
         ))}
       </ul>
     </div>

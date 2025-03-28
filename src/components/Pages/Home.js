@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import './home.css'
+import ebuk from '../../assets/utilityEbuk.png'
 import Tokenomics from "../Tokenomics/Tokenomics";
 import Freatures from "../Features/CVFreature";
 import CETAFeatureCard from "../Features/CetaFeature";
@@ -96,13 +97,22 @@ export const Home = () => {
             <ul>
             </ul>
           </div>
-          <Link to="/dashboard/user/user-kyc"> Proceed To Buy EBUK Tokens</Link>
+          <Link to="/dashboard/user/user-kyc" id="buy-link"> Proceed To Buy EBUK Tokens</Link>
         </div>
         <div className="buyer-container">
-        <div className='info-step-box' >
-        <h1 className='gradient-text'>Staking Mechanism (Post Listing)</h1>
+        <div className='info-step-box'>
+        <h1 className='gradient-text'>Utility of EBUK Tokens</h1>
+              <img src={ebuk} alt="ebuk-utility"></img>
+                <p>The EBUK Token is strictly a UTILITY TOKEN and NOT a SECURITY TOKEN. The value and use of the token are derived solely from its utility within the Edubuk platform and ecosystem. Key utilities of the EBUK Token include:</p>
+                <p>
+        1. Learners across the globe will be purchasing EBUK tokens to enroll in Edubuk's CETA courses on AI, Generative AI, Blockchain, Cybersecurity, Data Science, Data Analytics, and Data Visualization.<br></br>
+        2. Learners will be able to pay for certain diploma courses with Edubuk’s partner institutions like iCapital, LiOR Capital, and others using EBUK tokens.<br></br>
+        3. Learners can use EBUK tokens to pay for registering their CVs and Certificates on the blockchain using Edubuk’s dApp.<br></br>
+        4. EBUK tokens will be used to pay for participation in the International AI & Emerging Technologies Olympiad conducted by Edubuk.<br></br>
+        5. EBUK tokens will be accepted as payment for booking specific mentorship sessions.<br></br>
+        6. EBUK tokens will also be used for purchasing value-added courses on soft skills, communication skills, and other professional development modules.</p>
+        <h2>Staking Mechanism (Post Listing)</h2>
           <p>
-Prior to the token’s public listing, Edubuk will announce a staking mechanism available to all token holders. Key highlights:<br></br>
 
 1. Investors will be able to stake their EBUK tokens on Edubuk’s platform.<br></br>
 
@@ -112,49 +122,8 @@ Prior to the token’s public listing, Edubuk will announce a staking mechanism 
 
 4. Staking details, including reward limits and lock-in periods (if any), will be announced prior to the listing.
           </p>
-        </div>
-        </div>
-        {/* <div className="second-section">
-          <h1 className="gradient-text" id="how-to-buy">How To Buy</h1>
-          <div className="second-section-box">
-            <div className="step-container">
-              <p id="step-label">Step-1 Wallet Setup</p>
-              <p id="step-welcome">Welcome aboard! Start by getting MetaMask on your desktop browser or a Wallet Connect-compatible wallet like Trust Wallet for your mobile.
-                <br></br>
-                Desktop users, MetaMask is ideal for a smooth purchase process. Mobile users, Trust Wallet or MetaMask connected through Wallet Connect is your go-to.</p>
-              <div className="wallet-btn">
-                <a href="#test">
-                  Download
-                  <img src={metamask} alt="matamask-logo"></img>
-                </a>
-                <a href="#test">
-                  Download
-                  <img src={trust} alt="trust-logo"></img>
-                </a>
-              </div>
-            </div>
-            <div className="step-container">
-              <p id="step-label">Step-2 Purchase Process</p>
-              <p id="step-welcome">
-                Ready to invest? Simply pick your preferred currency on our site, input how many TICS tokens you'd like, and hit 'Buy Now'. A prompt will pop up from your wallet for transaction confirmation, where you’ll also see the gas fees.
-                <br></br>
-                <span id="italic-note">
-                  Note: Purchasing with USDT/USDC may involve two approvals—one to okay the contract and another for the actual payment.
-                </span>
-              </p>
-              <div className="tics-crypto-map">
-                <img src={ticsMap} alt="tics-map" id="tics-map"></img>
-              </div>
-            </div>
-            <div className="step-container">
-              <p id="step-label">Step-3 Token Reception</p>
-              <p id="step-welcome">
-                Once our presale wraps up, you can collect your TICS tokens through our website or wait for an airdrop straight to your wallet. Meanwhile, keep an eye on your investment and the token prices from your dashboard. Just connect your wallet to our website, and voilà—you’re there!
-              </p>
-              <img src={tokenReception} alt="tics-map" id="token-reception"></img>
-            </div>
           </div>
-        </div> */}
+        </div>
         <Tokenomics/>
         <div>
         <Freatures />

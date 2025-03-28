@@ -22,7 +22,6 @@ import BuyToken from "./components/Dashboard/User/BuyToken";
 import TermsAndConditions from "./components/Legals/TermCond";
 import PrivacyPolicy from "./components/Legals/PrivacyPolicy";
 import ScrollToTop from "./Scrolltop";
-import EbukUtility from "./components/Pages/EbukUtility";
 
 
 function App() {
@@ -51,7 +50,6 @@ function App() {
         <Route path="/sign-in" element={<SignIn />} />
         <Route  path="/terms-conditions" element={<TermsAndConditions />}/>
         <Route  path="/privacy-policy" element={<PrivacyPolicy />}/>
-        <Route  path="/ebuk-utility" element={<EbukUtility />}/>
         {/* User Dashboard Routes */}
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard links={userLinks} />}>
