@@ -627,7 +627,7 @@
 
 .video-container {
     position: relative;
-    width: 100%; /* Full width of the parent container */
+    width: 95%; /* Full width of the parent container */
     max-width: 800px; /* Set a max-width if needed */
     aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
     margin: auto; /* Centering the video */

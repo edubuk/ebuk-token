@@ -41,7 +41,7 @@ export const Home = () => {
           </iframe>
 
         </div>
-        <div className="buyer-container" data-aos="fade-up">
+        <div className="buyer-container" >
           <div className='info-step-box'>
             <h1 className='gradient-text'>How To Purchase EBUK Tokens</h1>
             {/* <p><strong>Note:</strong> Please complete your <Link to="/dashboard/user/user-kyc" id="status-link">KYC</Link> before purchasing the EBUK Tokens.</p> */}
@@ -98,8 +98,8 @@ export const Home = () => {
           </div>
           <Link to="/dashboard/user/user-kyc"> Proceed To Buy EBUK Tokens</Link>
         </div>
-        <div className="buyer-container" data-aos="fade-right">
-        <div className='info-step-box'>
+        <div className="buyer-container">
+        <div className='info-step-box' >
         <h1 className='gradient-text'>Staking Mechanism (Post Listing)</h1>
           <p>
 Prior to the token’s public listing, Edubuk will announce a staking mechanism available to all token holders. Key highlights:<br></br>
@@ -155,8 +155,8 @@ Prior to the token’s public listing, Edubuk will announce a staking mechanism 
             </div>
           </div>
         </div> */}
-        <Tokenomics />
-        <div data-aos="fade-down">
+        <Tokenomics/>
+        <div>
         <Freatures />
         </div>
         <div className="video-container">

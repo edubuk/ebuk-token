@@ -1,5 +1,5 @@
 import React from 'react'
-import ebuk from '../../assets/CETA.png'
+import ebuk from '../../assets/utilityEbuk.png'
 import './EbukUtility.css'
 const EbukUtility = () => {
   return (

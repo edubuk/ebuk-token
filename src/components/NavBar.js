@@ -15,7 +15,7 @@ const NavBar = () => {
   };
 
   const navData = [
-    {name:"Utility of EBUK Tokens",path:"/ebuk-utility"},
+    {name:"Utility of EBUK Token",path:"/ebuk-utility"},
     { name: 'Dashboard', path: `/dashboard/${auth?.user?.role === 1 ? "admin/pending-status" : "user"}` },
     { name: `${auth?.user ? "Logout" : "Sign-up"}`, path: '/sign-up' },
 
@@ -26,12 +26,12 @@ const NavBar = () => {
     localStorage.removeItem("auth");
   }
 
-  useEffect(() => {
-      AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
-    }, []);
+  // useEffect(() => {
+  //     AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
+  //   }, []);
 
   return (
-    <nav className="navbar" data-aos="fade-right">
+    <nav className="navbar">
     <div className='nav-section'>
       <div className="navbar-left">
         <Link to="/">

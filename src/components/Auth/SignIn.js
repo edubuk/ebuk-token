@@ -51,7 +51,8 @@ const SignIn = () => {
                 }
             })
             res = await res.json();
-            if(res.success)
+            console.log("res",res);
+            if(res?.success)
             {
                 toast.dismiss(id);
                 toast.success(res.message);
@@ -59,12 +60,12 @@ const SignIn = () => {
                 localStorage.setItem("auth", JSON.stringify(res))
                 navigate("/dashboard/user")
             }
-            else if(!res.success)
+            else if(!res?.success)
             {
                 toast.error(res.message);
                 toast.dismiss(id);
             }
-            console.log("res",res)
+            //console.log("res",res)
         } catch (error) {
             toast.dismiss(id);
             toast.error("something went wrong")
