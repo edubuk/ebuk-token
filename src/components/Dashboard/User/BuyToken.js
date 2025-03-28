@@ -284,10 +284,10 @@ const BuyToken = () => {
                 {imageError && <p id='image-error'>{imageError}</p>}
               </div>
                <div className='checkbox-input'>
-              <input type="checkbox" onChange={()=>setChecked(!isChecked)}></input>
+              <input type="checkbox" value={isChecked} onChange={()=>setChecked(!isChecked)}></input>
               <p>I have read and accept the Edubuk <Link to="/terms-conditions" id='status-link'>Terms & Conditions</Link> for this private purchase.</p> 
               </div>
-              <button type="submit" className={isImageUploading ? "uploading" : "submit-btn"} disabled={(isImageUploading||!isChecked)}>
+              <button type="submit" className={isImageUploading||!isChecked ? "uploading" : "submit-btn"} disabled={(isImageUploading||!isChecked)}>
                 Submit
               </button>
             </form>

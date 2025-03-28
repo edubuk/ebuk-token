@@ -644,9 +644,11 @@
     padding: 15px;
     font-size: 18px;
   }
+
+  
   .info-step-box>img{
-    width: 100%;
-    height: auto;
+    width:100%;
+    height:auto;
     display: block;
   }
   
@@ -736,5 +738,6 @@
 {
     margin-top: -20rem;
 }
+
 }
 
