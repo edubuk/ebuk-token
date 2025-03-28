@@ -24,6 +24,7 @@ const BuyToken = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [walletAddress, setWalletAddress] = useState("");
   const [refferalCode, setRefferalCode] = useState("");
+  const [isChecked, setChecked] = useState(false);
   const [auth] = useAuth();
   const [selOption, setSelOption] = useState("INR");
 
@@ -94,7 +95,7 @@ const BuyToken = () => {
         return toast.error("No file choosen");
       }
       if (!refferalCode) {
-        return toast.error(" Please enter referral code. Please enter N/A if you don't have one");
+        return toast.error(" Please enter referral code. Enter N/A if you don't have one");
       }
       id = toast.loading("Please wait...");
       let data = await fetch(`${BASE_URL}/api/v1/user/create-new-payment`, {
@@ -282,8 +283,11 @@ const BuyToken = () => {
                 {!isImageUploading && imagePreview && <p>Uploaded <a href={imagePreview} target='_blank' rel="noopener noreferrer">Preview</a></p>}
                 {imageError && <p id='image-error'>{imageError}</p>}
               </div>
-
-              <button type="submit" className={isImageUploading ? "uploading" : "submit-btn"} disabled={isImageUploading}>
+               <div className='checkbox-input'>
+              <input type="checkbox" onChange={()=>setChecked(!isChecked)}></input>
+              <p>I have read and accept the Edubuk <Link to="/terms-conditions" id='status-link'>Terms & Conditions</Link> for this private purchase.</p> 
+              </div>
+              <button type="submit" className={isImageUploading ? "uploading" : "submit-btn"} disabled={(isImageUploading||!isChecked)}>
                 Submit
               </button>
             </form>

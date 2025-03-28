@@ -23,7 +23,7 @@ const NavBar = () => {
 
   const logoutHandler = () => {
     setAuth({ ...auth, user: null, token: "" });
-    localStorage.removeItem("AUTH_DETAILS");
+    localStorage.removeItem("auth");
   }
 
   // useEffect(() => {
@@ -58,12 +58,12 @@ const NavBar = () => {
         </div>
         </div>
       {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} navData={navData} setIsSidebarOpen={setIsSidebarOpen}/>
+      <Sidebar isOpen={isSidebarOpen} navData={navData} setIsSidebarOpen={setIsSidebarOpen} logoutHandler={logoutHandler}/>
     </nav>
   );
 };
 
-const Sidebar = ({ isOpen, navData,setIsSidebarOpen }) => {
+const Sidebar = ({ isOpen, navData,setIsSidebarOpen,logoutHandler={logoutHandler} }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul>
@@ -81,9 +81,11 @@ const Sidebar = ({ isOpen, navData,setIsSidebarOpen }) => {
       <a href="https://drive.google.com/file/d/1gzXdHZHny33XqV-f-DNr7APQwXQWlF-2/view" className="nav-link" target='_blank' rel="noreferrer">Whitepaper</a>
       </li>
         {navData.map((link, index) => (
-          <li key={index}>
-            <Link to={link.path} onClick={()=>setIsSidebarOpen(false)}>{link.name}</Link>
-          </li>
+          link?.name === 'Dashboard' ? <NavLink key={index} to={link.path} className="nav-link">{link.name}</NavLink> : link.name === "Logout" ? <Link key={index} to="/sign-in" className="nav-link" onClick={logoutHandler}>
+            {link.name}
+          </Link> : <Link key={index} to={link.path} className="nav-link">
+            {link.name}
+          </Link>
         ))}
       </ul>
     </div>
