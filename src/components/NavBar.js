@@ -23,7 +23,7 @@ const NavBar = () => {
 
   const logoutHandler = () => {
     setAuth({ ...auth, user: null, token: "" });
-    localStorage.removeItem("auth");
+    localStorage.removeItem("AUTH_DETAILS");
   }
 
   // useEffect(() => {
