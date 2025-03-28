@@ -111,7 +111,7 @@ export const Home = () => {
         4. EBUK tokens will be used to pay for participation in the International AI & Emerging Technologies Olympiad conducted by Edubuk.<br></br>
         5. EBUK tokens will be accepted as payment for booking specific mentorship sessions.<br></br>
         6. EBUK tokens will also be used for purchasing value-added courses on soft skills, communication skills, and other professional development modules.</p>
-        <h2>Staking Mechanism (Post Listing)</h2>
+        <h2>Staking Mechanism</h2>
           <p>
 
 1. Investors will be able to stake their EBUK tokens on Edubuk’s platform.<br></br>

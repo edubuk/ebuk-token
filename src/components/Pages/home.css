@@ -230,6 +230,9 @@
 .info-step-box>h2{
     text-align:start
 }
+.info-step-box>p{
+    line-height: 30px;
+}
 
 .col-1
 {
