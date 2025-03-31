@@ -75,13 +75,13 @@ const Sidebar = ({ isOpen, navData,setIsSidebarOpen,logoutHandler={logoutHandler
       <a href="/#tokenomics" className="nav-link" onClick={()=>setIsSidebarOpen(false)}>Tokenomics</a>
       </li>
       <li>
-      <a href="https://drive.google.com/file/d/1EW5mnQg4HLZUoKbCkX2sXMbkV0Dkyknx/view" className="nav-link" target='_blank' rel="noreferrer">PitchDeck</a>
+      <a href="https://drive.google.com/file/d/1EW5mnQg4HLZUoKbCkX2sXMbkV0Dkyknx/view" className="nav-link" target='_blank' rel="noreferrer" onClick={()=>setIsSidebarOpen(false)}>PitchDeck</a>
       </li>
       <li>
-      <a href="https://drive.google.com/file/d/1gzXdHZHny33XqV-f-DNr7APQwXQWlF-2/view" className="nav-link" target='_blank' rel="noreferrer">Whitepaper</a>
+      <a href="https://drive.google.com/file/d/1gzXdHZHny33XqV-f-DNr7APQwXQWlF-2/view" className="nav-link" target='_blank' rel="noreferrer" onClick={()=>setIsSidebarOpen(false)}>Whitepaper</a>
       </li>
         {navData.map((link, index) => (
-          link?.name === 'Dashboard' ? <li><NavLink key={index} to={link.path} className="nav-link">{link.name}</NavLink></li> : link.name === "Logout" ? <li><Link key={index} to="/sign-in" className="nav-link" onClick={logoutHandler}>{link.name}</Link></li> : <li><Link key={index} to={link.path} className="nav-link">{link.name}</Link></li>
+          link?.name === 'Dashboard' ? <li><NavLink key={index} to={link.path} className="nav-link" onClick={()=>setIsSidebarOpen(false)}>{link.name}</NavLink></li> : link.name === "Logout" ? <li><Link key={index} to="/sign-in" className="nav-link" onClick={()=>{setIsSidebarOpen(false);logoutHandler()}}>{link.name}</Link></li> : <li><Link key={index} to={link.path} className="nav-link" onClick={()=>setIsSidebarOpen(false)}>{link.name}</Link></li>
         ))}
       </ul>
     </div>
