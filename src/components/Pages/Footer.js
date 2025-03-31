@@ -4,7 +4,7 @@ import logo from '../../assets/EdubukLogo.png';
 import twitter from '../../assets/twitter.svg';
 import telegram from '../../assets/telegram.svg';
 import youtube from '../../assets/youtube.svg';
-import instagram from '../../assets/instagram.svg';
+import linkedin from '../../assets/linkedin.png';
 import metaMask from '../../assets/metamask.svg';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
@@ -83,17 +83,17 @@ const Footer = () => {
             <div className='footer-social-section'>
               <p>Get in touch!</p>
               <div className='footer-social-icon-section'>
-                <a href="https://x.com/edubuktrust">
+                <a href="https://www.linkedin.com/company/edubuk-ai-web3/" target="_blank" rel="noreferrer">
+                  <img src={linkedin} alt='social-icon' id='social-icon'></img>
+                </a>
+                <a href="https://x.com/edubuktrust" target="_blank" rel="noreferrer">
                   <img src={twitter} alt='social-icon' id='social-icon'></img>
                 </a>
-                <a href="https://t.me/edubukofficial">
+                <a href="https://t.me/edubukofficial" target='_blank' rel="noreferrer">
                   <img src={telegram} alt='social-icon' id='social-icon'></img>
                 </a>
-                <a href="https://www.youtube.com/channel/UC4g4MH4F_JTbd1tqNS5pq1g/videos">
+                <a href="https://www.youtube.com/channel/UC4g4MH4F_JTbd1tqNS5pq1g/videos" target='_blank' rel="noreferrer">
                   <img src={youtube} alt='social-icon' id='social-icon'></img>
-                </a>
-                <a href="https://www.instagram.com/edubuk_/">
-                  <img src={instagram} alt='social-icon' id='social-icon'></img>
                 </a>
               </div>
             </div>

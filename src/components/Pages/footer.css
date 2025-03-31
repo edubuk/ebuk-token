@@ -195,6 +195,11 @@
     width: 100%;
 }
 
+#social-icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
 
 @media (max-width: 1500px) {
     .form-container {
