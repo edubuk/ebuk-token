@@ -406,7 +406,12 @@ label {
     margin-top: 60px;
 
   }
-  
+  .choose-metamask-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
   .input-field {
     display: flex;
     flex-direction: column;

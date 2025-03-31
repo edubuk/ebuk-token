@@ -5,15 +5,48 @@ import twitter from '../../assets/twitter.svg';
 import telegram from '../../assets/telegram.svg';
 import youtube from '../../assets/youtube.svg';
 import instagram from '../../assets/instagram.svg';
+import metaMask from '../../assets/metamask.svg';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
+
 const Footer = () => {
+
+  const addXdcToMetamask = async()=>{
+    try {
+      if(!window.ethereum)
+      {
+        return toast.error("Please install metamask.")
+      }
+
+      await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [{
+          chainId: "0x32",
+          rpcUrls: ["https://erpc.xinfin.network"],
+          chainName: "XDC Network",
+          nativeCurrency: {
+            name: "XDC",
+            symbol: "XDC",
+            decimals: 18
+          },
+          blockExplorerUrls: ["https://xdc.blocksscan.io"]
+        }]
+      });
+    } catch (error) {
+      console.log("error while adding xdc to metamask");
+      toast.error("something went wrong");
+    }
+  }
   return (
     <>
       <div className='footer'>
         <div className='footer-bg'></div>
         <div className='footer-inner'>
-          <div className='form-container'>
+          <div className='footer-header'>
             <Link to="/sign-up">Sign-Up for Presale</Link>
+          <div className='metamask-btn'>
+          <button onClick={addXdcToMetamask}>  <img src={metaMask} alt='metamask-logo' id='social-icon' /> Add XDC network</button>
+          </div>
           </div>
           <div className='footer-info-container'>
             <div className='footer-info-section'>

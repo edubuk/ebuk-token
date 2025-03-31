@@ -49,16 +49,16 @@
     padding: 0px 20px;
 }
 
-.form-container
-{
+.footer-header{
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 3rem;
-    grid-area: form;
-    max-width: 33rem;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
 }
-.form-container>a
+
+.footer-header>a
 {
     font-size: 1.25rem;
     font-weight: 700;

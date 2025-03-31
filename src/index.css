@@ -40,6 +40,10 @@ code {
 } 
 
 button{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 5px;
   padding: 8px;
   font-size: 16px;
   background-color: #004466;

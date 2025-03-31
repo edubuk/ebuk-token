@@ -4,6 +4,8 @@ import './Dashboard.css';
 import { Link } from 'react-router-dom';
 import { app } from '../../../Firebase/FirebaseConfig'
 import { toast } from 'react-hot-toast';
+import metaMask from '../../../assets/metamask.svg';
+
 import {
   getDownloadURL,
   getStorage,
@@ -25,8 +27,36 @@ const BuyToken = () => {
   const [walletAddress, setWalletAddress] = useState("");
   const [refferalCode, setRefferalCode] = useState("");
   const [isChecked, setChecked] = useState(false);
+  const [isChecked2, setChecked2] = useState(false);
   const [auth] = useAuth();
   const [selOption, setSelOption] = useState("INR");
+
+  const addXdcToMetamask = async()=>{
+      try {
+        if(!window.ethereum)
+        {
+          return toast.error("Please install metamask.")
+        }
+  
+        await window.ethereum.request({
+          method: "wallet_addEthereumChain",
+          params: [{
+            chainId: "0x32",
+            rpcUrls: ["https://erpc.xinfin.network"],
+            chainName: "XDC Network",
+            nativeCurrency: {
+              name: "XDC",
+              symbol: "XDC",
+              decimals: 18
+            },
+            blockExplorerUrls: ["https://xdc.blocksscan.io"]
+          }]
+        });
+      } catch (error) {
+        console.log("error while adding xdc to metamask");
+        toast.error("something went wrong");
+      }
+    }
 
 
   const handleAmountChange = (e) => {
@@ -37,7 +67,6 @@ const BuyToken = () => {
       edbukToken = selOption == "INR" ? (enteredAmount / 1.32) : (enteredAmount / 0.015);
     setTokenAmount(Math.round(edbukToken * 1000) / 1000);
   };
-
 
   const uploadImageToDB = (file) => {
     if (!file) return;
@@ -214,15 +243,19 @@ const BuyToken = () => {
 
         <div className="right-section">
           <div className="payment-form">
-            <h2>Payment Form</h2>
+          <div className='choose-metamask-section'>
+            <h2>Payment Form</h2><button onClick={addXdcToMetamask}>  <img src={metaMask} alt='metamask-logo' id='social-icon' /> Add XDC network</button>
+            </div>
             <form onSubmit={createPayment}>
               <div className="input-field">
+              <div>
                 <label htmlFor="payment-method">Choose Payment Method:</label>
                 <select id="payment-method" className="dropdown" onChange={(e) => { setAmount(""); setTokenAmount(""); setSelOption(e.target.value) }}>
                   <option>INR</option>
                   <option>US Dollar</option>
                   <option>USDC/USDT</option>
                 </select>
+                </div>
                 <label htmlFor="dollarAmount">Amount in {selOption}:*</label>
                 <input
                   type="number"
@@ -232,7 +265,6 @@ const BuyToken = () => {
                   placeholder={`Enter Amount In ${selOption}`}
                 />
               </div>
-
               <div className="input-field">
                 <label htmlFor="tokenAmount">Equivalent Tokens (EBUK) You Will Receive:</label>
                 <input
@@ -283,11 +315,15 @@ const BuyToken = () => {
                 {!isImageUploading && imagePreview && <p>Uploaded <a href={imagePreview} target='_blank' rel="noopener noreferrer">Preview</a></p>}
                 {imageError && <p id='image-error'>{imageError}</p>}
               </div>
-               <div className='checkbox-input'>
-              <input type="checkbox" value={isChecked} onChange={()=>setChecked(!isChecked)}></input>
+              <div className='checkbox-input'>
+              <input type="checkbox" value={isChecked2} onChange={()=>setChecked2(!isChecked2)}></input>
               <p>I have read and accept the Edubuk <Link to="/terms-conditions" id='status-link'>Terms & Conditions</Link> for this private purchase.</p> 
               </div>
-              <button type="submit" className={isImageUploading||!isChecked ? "uploading" : "submit-btn"} disabled={(isImageUploading||!isChecked)}>
+              <div className='checkbox-input'>
+              <input type="checkbox" value={isChecked} onChange={()=>setChecked(!isChecked)}></input>
+              <p>I understand this is the official smart contract address of EBUK Tokens on XDC Network: 0x8d1a...2d067 <FaCopy onClick={() => dataCopy("0x8d1a92ba51b469ad55720546fa38ba365112d067")}/> and I have copied the same.</p> 
+              </div>
+              <button type="submit" className={isImageUploading||!isChecked||!isChecked2 ? "uploading" : "submit-btn"} disabled={(isImageUploading||!isChecked)}>
                 Submit
               </button>
             </form>
