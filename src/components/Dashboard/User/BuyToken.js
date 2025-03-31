@@ -321,7 +321,7 @@ const BuyToken = () => {
               </div>
               <div className='checkbox-input'>
               <input type="checkbox" value={isChecked} onChange={()=>setChecked(!isChecked)}></input>
-              <p>I understand this is the official smart contract address of EBUK Tokens on XDC Network: 0x8d1a...2d067 <FaCopy onClick={() => dataCopy("0x8d1a92ba51b469ad55720546fa38ba365112d067")}/> and I have copied the same.</p> 
+              <p>I understand this is the official smart contract address of EBUK Tokens on XDC Network: 0x8d1a92ba51b469ad55720546fa38ba365112d067 <FaCopy onClick={() => dataCopy("0x8d1a92ba51b469ad55720546fa38ba365112d067")}/> and I have copied the same.</p> 
               </div>
               <button type="submit" className={isImageUploading||!isChecked||!isChecked2 ? "uploading" : "submit-btn"} disabled={(isImageUploading||!isChecked)}>
                 Submit

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import './NavBar.css';
 import {Link, NavLink } from 'react-router-dom';
 import logo from '../assets/EdubukLogo.png';
 import { useAuth } from '../context/auth';
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 
 const NavBar = () => {
@@ -63,7 +62,7 @@ const NavBar = () => {
   );
 };
 
-const Sidebar = ({ isOpen, navData,setIsSidebarOpen,logoutHandler={logoutHandler} }) => {
+const Sidebar = ({ isOpen, navData,setIsSidebarOpen,logoutHandler}) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul>

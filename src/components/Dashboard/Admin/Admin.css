@@ -5,7 +5,8 @@
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 10px;
-    height: 100vh;
+    height: 100%;
+    margin-bottom: 10px;
 }
 .user-card {
     background: linear-gradient(45deg, #008888, #005d88c2);

@@ -87,14 +87,14 @@ const PendingTx = () => {
             <button onClick={() => getStatus(paymentData.emailId)}>Check KYC</button>
             <p>
               KYC Status:{" "}
-              {statusMap[paymentData.emailId]?.faceLiveNess === "APPROVED" ||
+              {statusMap[paymentData.emailId]?.faceLiveNess === "APPROVED" &&
                 statusMap[paymentData.emailId]?.document === "PENDING_VERIFICATION" ? (
                 <span style={{ color: "blue" }}> Pending</span>
               ) : null}
               <span className={statusMap[paymentData.emailId]?.faceLiveNess && statusMap[paymentData.emailId]?.document === "APPROVED"
                 ? "verified"
                 : "not-verified"}>
-                {statusMap[paymentData.emailId]?.faceLiveNess && statusMap[paymentData.emailId]?.document === "APPROVED" ? (
+                {statusMap[paymentData?.emailId]?.faceLiveNess && statusMap[paymentData?.emailId]?.document === "APPROVED" ? (
                   <>
                     <MdVerified className="verified-icon" /> Verified
                   </>

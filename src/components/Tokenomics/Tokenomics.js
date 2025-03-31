@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './tokenomic.css'
 import { PieChart } from 'react-minimal-pie-chart';
 
