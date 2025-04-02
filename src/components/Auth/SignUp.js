@@ -155,7 +155,7 @@ const SignUp = () => {
                 <p>We have sent OTP to {inputData.email}. Please check your email</p>
                 <input type="string"
                     value={otp}
-                    placeholder="Enter your otp"
+                    placeholder="Enter your OTP"
                     onChange={(e) => setOtp(e.target.value)}
                 ></input>
                 <div className='button-handler'>

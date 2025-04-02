@@ -312,7 +312,7 @@ const BuyToken = () => {
                   </label>
                 </div>
                 {isImageUploading && <p>Uploading...</p>}
-                {!isImageUploading && imagePreview && <p>Uploaded <a href={imagePreview} target='_blank' rel="noopener noreferrer">Preview</a></p>}
+                {!isImageUploading && imagePreview && <p>Uploaded <a href={imagePreview} target='_blank' rel="noopener noreferrer" id='status-link'>Preview</a></p>}
                 {imageError && <p id='image-error'>{imageError}</p>}
               </div>
               <div className='checkbox-input'>

@@ -4,6 +4,7 @@ import { FaUserCircle, FaEdit } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 import { useAuth } from "../../../context/auth";
 import PaymentHistroy from "../User/PaymentHistroy";
+import toast from "react-hot-toast";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -57,12 +58,14 @@ const PendingTx = () => {
     }
   };
 
+
   useEffect(() => {
     getUsersPaymentDetails();
   }, []);
 
   return (
     <div className="user-details-container">
+    
       {userPaymentHistory?.length === 0 && <p>No Data Found..</p>}
       {userPaymentHistory?.length > 0 && userPaymentHistory.map((paymentData, i) => (
         <div className="user-card" key={i + 1}>
@@ -76,7 +79,7 @@ const PendingTx = () => {
 
           {/* Payment Screenshot */}
           <div className="payment-section">
-            <button onClick={() => { setUserId(i + 1); setIsOpen(true); }}>View Payment Image</button>
+            <button onClick={() => { setUserId(i + 1); setIsOpen(true); }}>Manage Payments</button>
           </div>
           {userId === (i + 1) &&
             <PaymentHistroy isOpen={isOpen} setIsOpen={setIsOpen} payments={paymentData.paymentInfo} email={paymentData.emailId} />
@@ -103,12 +106,6 @@ const PendingTx = () => {
                 )}
               </span>
             </p>
-          </div>
-
-          {/* Token Transfer Details */}
-          <div className="token-section">
-            <p>Tokens Transferred: <span className="token-amount">0 EBUK</span></p>
-            <FaEdit />
           </div>
         </div>
       ))}

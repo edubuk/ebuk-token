@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 import './NavBar.css';
-import {Link, NavLink } from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import logo from '../assets/EdubukLogo.png';
 import { useAuth } from '../context/auth';
 
@@ -25,9 +25,6 @@ const NavBar = () => {
     localStorage.removeItem("auth");
   }
 
-  // useEffect(() => {
-  //     AOS.init({ duration: 2000 }); // Animation duration and one-time trigger
-  //   }, []);
 
   return (
     <nav className="navbar">
@@ -38,12 +35,12 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="navbar-links">
-      <Link to="/" className="nav-link">Home</Link>
+      <Link to="/"  className="nav-link">Home</Link>
       <a href="/#tokenomics" className="nav-link">Tokenomics</a>
       <a href="https://drive.google.com/file/d/1EW5mnQg4HLZUoKbCkX2sXMbkV0Dkyknx/view" className="nav-link" target='_blank' rel="noreferrer">PitchDeck</a>
       <a href="https://drive.google.com/file/d/1gzXdHZHny33XqV-f-DNr7APQwXQWlF-2/view" className="nav-link" target='_blank' rel="noreferrer">Whitepaper</a>
         {navData.map((link, index) => (
-          link?.name === 'Dashboard' ? <NavLink key={index} to={link.path} className="nav-link">{link.name}</NavLink> : link.name === "Logout" ? <Link key={index} to="/sign-in" className="nav-link" onClick={logoutHandler}>
+          link?.name === 'Dashboard' ? <NavLink key={index} to={link.path} className="nav-link" >{link.name}</NavLink> : link.name === "Logout" ? <Link key={index} to="/sign-in" className="nav-link" onClick={logoutHandler}>
             {link.name}
           </Link> : <Link key={index} to={link.path} className="nav-link">
             {link.name}

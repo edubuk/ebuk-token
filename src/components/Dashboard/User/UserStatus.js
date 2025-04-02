@@ -8,6 +8,7 @@ import { FaRegIdCard } from "react-icons/fa6";
 import { useAuth } from '../../../context/auth';
 import { MdOutlineVerified } from "react-icons/md";
 import PaymentHistroy from './PaymentHistroy';
+import TokenHistroy from './TokenHistory';
 
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -22,6 +23,7 @@ const UserStatus = () => {
   })
   const [history, setHistory] = useState([{}]);
   const [paymentStatus,setPaymentStatus]= useState("Not Initialized");
+  const [showPopup, setShowPopup] = useState(false);
   const getStatus = async () => {
     try {
       let res = await fetch(`${BASE_URL}/api/v1/user/get-session-status/${auth?.user?.email}`, {
@@ -56,7 +58,7 @@ const UserStatus = () => {
       console.log("history",paymentHistory);
       if(paymentHistory?.success)
       {
-        //console.log("payment",paymentHistory.data)
+        //console.log("payment",paymentHistory.history)
         setHistory(paymentHistory.history);
         setPaymentStatus(paymentHistory.message);
         
@@ -78,12 +80,25 @@ const UserStatus = () => {
     }
 
   }
+  const getTokenHistory = ()=>{
+    if(history?.length>0)
+    {
+      setShowPopup(true);
+    }
+    else
+    {
+      getUserPaymentHistory();
+      setShowPopup(true);
+    }
+
+  }
+
 
   useEffect(() => {
     getStatus();
     getUserPaymentHistory();
     
-  }, [getStatus, getUserPaymentHistory])
+  }, [])
 
 
   return (
@@ -152,10 +167,11 @@ const UserStatus = () => {
       <div className='status-card'>
         <GiToken id='icon' />
         <h1>EBUK Tokens</h1>
-        <p>Current Status:<strong> Not Initialized</strong></p>
-        <button>View History</button>
+        <p>Check received tokens status using below button</p>
+        <button onClick={getTokenHistory}>View History</button>
       </div>
     </div>
+    <TokenHistroy showPopup={showPopup} setShowPopup={setShowPopup} payments={history}/>
     <PaymentHistroy isOpen = {isOpen} setIsOpen={setIsOpen} payments={history} email={auth?.user?.email}/>
     </>
   )

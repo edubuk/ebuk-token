@@ -30,6 +30,14 @@
     padding: 10px;
     width: 95%;
 }
+#active-link
+{
+  background: linear-gradient(to right, #ff98e2, #ffc876, #79fff7);
+  background-clip:text ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color .2s ease-out;
+}
 
 .menu-btn{
     color:#FFC300;
@@ -436,7 +444,7 @@ label {
     width: 100%;
   }
   .input-field>input::placeholder {
-    color: #ffffff;
+    color: #ccc;
   }
   .input-field>input:focus {
     border-color:  #FFD700;
@@ -546,9 +554,14 @@ label {
 
   .checkbox-input{
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     gap: 5px;
+  }
+  .checkbox-input>p{
+      word-break: break-word; /* Ensures the address wraps properly */
+      overflow-wrap: break-word; /* Alternative wrapping method */
+      white-space: normal; /* Prevents it from staying on one line */
   }
   
   @media (max-width: 850px) {
@@ -576,7 +589,7 @@ label {
 
 /* ---------------payment history-------------- */
 
-/* Modal Overlay */
+/* Modal Styling */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -588,67 +601,207 @@ label {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  z-index: 10;
 }
 
-/* Modal Box */
 .modal-content {
   background: linear-gradient(45deg, #008888, #005d88c2);
   padding: 20px;
   border-radius: 8px;
   width: 90%;
-  max-width: 600px;
+  max-width: 800px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
+/* Table Styles */
 .table-container {
   overflow-x: auto;
   max-width: 100%;
   margin-top: 10px;
 }
 
-/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
   font-size: 14px;
 }
 
-th{
+th, td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
-}
-td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-td>a{
+th {
+  background: #007bff;
+}
+
+td a {
   text-decoration: none;
   border: 1px solid rgb(0, 183, 255);
   padding: 2px 8px;
   border-radius: 1.2rem;
-  color:#ffffff ;
+  color: #ffffff;
 }
 
+/* Nested Table */
+.nested-table {
+  width: 100%;
+  border-radius: 5px;
+}
 
-/* Buttons */
-.open-btn, .close-btn {
-  padding: 10px 15px;
-  background: blue;
+.nested-table th {
+  background: #2a2a2a;
+}
+
+.nested-table td {
+  background: #333;
+  border-bottom: 1px solid #444;
+}
+
+/* Input Section */
+.table-input-section {
+  display: flex;
+  gap: 5px;
+}
+
+.table-input-section input {
+  padding: 5px;
+  max-width: 100px;
+  border: 1px solid #79fff7;
+  border-radius: 2rem;
+  color: white;
+  background: transparent;
+}
+
+.table-input-section button {
+  padding: 3px 5px;
+  background: #007bff;
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
+}
+
+/*-----------------token history-----------*/
+
+/* Container */
+.container {
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+/* Buttons */
+.open-popup-btn,
+.close-popup-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.open-popup-btn {
+  background-color: #007bff;
+  color: white;
 }
 
 .close-btn {
-  background: red;
+  background-color: #dc3545;
+  color: white;
+  margin-top: 20px;
 }
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: linear-gradient(45deg, #008888, #005d88c2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* Main Table */
+.main-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.main-table th,
+.main-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Parent Row */
+.parent-row {
+  background: linear-gradient(45deg, #008888, #005d88c2);
+}
+
+/* Clickable Icon */
+.icon-cell {
+  cursor: pointer;
+  font-size: 18px;
+  width: 40px;
+  text-align: center;
+}
+
+/* Child Row (Initially Hidden) */
+.child-row {
+  display: none;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.child-row.show {
+  display: table-row;
+}
+
+/* Nested Table Wrapper (For Smooth Expand Effect) */
+.nested-table-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.child-row.show .nested-table-wrapper {
+  max-height: 200px; /* Adjust as needed */
+}
+
+/* Nested Table */
+.nested-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  
+}
+
+.nested-table th,
+.nested-table td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+  background: transparent;
+}
+
+
 
 @media (max-width: 600px) {
   th, td {

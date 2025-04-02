@@ -44,7 +44,7 @@ const Footer = () => {
         <div className='footer-inner'>
           <div className='footer-header'>
             <Link to="/sign-up">Sign-Up for Presale</Link>
-          <div className='metamask-btn'>
+            <div className='metamask-btn'>
           <button onClick={addXdcToMetamask}>  <img src={metaMask} alt='metamask-logo' id='social-icon' /> Add XDC network</button>
           </div>
           </div>
