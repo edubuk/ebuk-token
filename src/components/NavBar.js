@@ -1,7 +1,9 @@
 import React, {useState } from 'react';
 import './NavBar.css';
 import {Link, NavLink} from 'react-router-dom';
-import logo from '../assets/EdubukLogo.png';
+import logo from '../assets/Logo_name.jpg';
+//import logo from '../assets/newLOGO.png';
+//import logo from '../assets/LOGO__SIGN.jpg';
 import { useAuth } from '../context/auth';
 
 
