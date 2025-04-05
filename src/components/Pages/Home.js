@@ -103,7 +103,7 @@ export const Home = () => {
             <h2>Step 1: Sign Up and Verify Your Email</h2>
             <ul>
               <li>Please sign up using this <Link to="/sign-up" id="status-link">Register</Link> link.</li>
-              <li>Once registered, confirm your email address by entering the OTP (One-Time Password) sent to your inbox from investment@edubukeseal.org.</li>
+              <li>Once registered, confirm your email address by entering the OTP (One-Time Password) sent to your inbox from edubuk.notification@gmail.com</li>
             </ul>
             <h2>Step 2: Complete KYC Verification (Mandatory)</h2>
             <ul>
