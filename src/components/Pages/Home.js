@@ -42,6 +42,60 @@ export const Home = () => {
           </iframe>
 
         </div>
+        <div className="buyer-container">
+        <div className='info-step-box'>
+        <h1 className='gradient-text'>Utility of EBUK Tokens</h1>
+              <img src={ebuk} alt="ebuk-utility"></img>
+                <p>The EBUK Token is strictly a UTILITY TOKEN and NOT a SECURITY TOKEN. The value and use of the token are derived solely from its utility within the Edubuk platform and ecosystem. Key utilities of the EBUK Token include:</p>
+                <p>
+        1. Learners across the globe will be purchasing EBUK tokens to enroll in Edubuk's CETA courses on AI, Generative AI, Blockchain, Cybersecurity, Data Science, Data Analytics, and Data Visualization.<br></br>
+        2. Learners will be able to pay for certain diploma courses with Edubuk’s partner institutions like iCapital, LiOR Capital, and others using EBUK tokens.<br></br>
+        3. Learners can use EBUK tokens to pay for registering their CVs and Certificates on the blockchain using Edubuk’s dApp.<br></br>
+        4. EBUK tokens will be used to pay for participation in the International AI & Emerging Technologies Olympiad conducted by Edubuk.<br></br>
+        5. EBUK tokens will be accepted as payment for booking specific mentorship sessions.<br></br>
+        6. EBUK tokens will also be used for purchasing value-added courses on soft skills, communication skills, and other professional development modules.</p>
+        <h2>Staking Mechanism</h2>
+          <p>
+
+1. Investors will be able to stake their EBUK tokens on Edubuk’s platform.<br></br>
+
+2. The staking offers an Annual Percentage Yield (APY) of 10%.<br></br>
+
+3. The staking program will include a maximum cap on absolute staking rewards per user.<br></br>
+
+4. Staking details, including reward limits and lock-in periods (if any), will be announced prior to the listing.
+          </p>
+          </div>
+        </div>
+        <Freatures />
+        <div className="video-container">
+          <iframe
+            width="600"
+            height="315"
+            src="https://www.youtube.com/embed/CsrP58BXpTA?si=bfbQrsQAl51VJKPd&autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <CETAFeatureCard />
+        <div className="video-container">
+          <iframe
+            width="600"
+            height="315"
+            src="https://www.youtube.com/embed/fL4GB7rie54?si=lArzvbR6h4vLfQcg&autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+        <OlympiadFeature />
+        <InternshipFeatur />
         <div className="buyer-container" >
           <div className='info-step-box'>
             <h1 className='gradient-text'>How To Purchase EBUK Tokens</h1>
@@ -99,63 +153,7 @@ export const Home = () => {
           </div>
           <Link to="/dashboard/user/user-kyc" id="buy-link"> Proceed To Buy EBUK Tokens</Link>
         </div>
-        <div className="buyer-container">
-        <div className='info-step-box'>
-        <h1 className='gradient-text'>Utility of EBUK Tokens</h1>
-              <img src={ebuk} alt="ebuk-utility"></img>
-                <p>The EBUK Token is strictly a UTILITY TOKEN and NOT a SECURITY TOKEN. The value and use of the token are derived solely from its utility within the Edubuk platform and ecosystem. Key utilities of the EBUK Token include:</p>
-                <p>
-        1. Learners across the globe will be purchasing EBUK tokens to enroll in Edubuk's CETA courses on AI, Generative AI, Blockchain, Cybersecurity, Data Science, Data Analytics, and Data Visualization.<br></br>
-        2. Learners will be able to pay for certain diploma courses with Edubuk’s partner institutions like iCapital, LiOR Capital, and others using EBUK tokens.<br></br>
-        3. Learners can use EBUK tokens to pay for registering their CVs and Certificates on the blockchain using Edubuk’s dApp.<br></br>
-        4. EBUK tokens will be used to pay for participation in the International AI & Emerging Technologies Olympiad conducted by Edubuk.<br></br>
-        5. EBUK tokens will be accepted as payment for booking specific mentorship sessions.<br></br>
-        6. EBUK tokens will also be used for purchasing value-added courses on soft skills, communication skills, and other professional development modules.</p>
-        <h2>Staking Mechanism</h2>
-          <p>
-
-1. Investors will be able to stake their EBUK tokens on Edubuk’s platform.<br></br>
-
-2. The staking offers an Annual Percentage Yield (APY) of 10%.<br></br>
-
-3. The staking program will include a maximum cap on absolute staking rewards per user.<br></br>
-
-4. Staking details, including reward limits and lock-in periods (if any), will be announced prior to the listing.
-          </p>
-          </div>
-        </div>
         <Tokenomics/>
-        <div>
-        <Freatures />
-        </div>
-        <div className="video-container">
-          <iframe
-            width="600"
-            height="315"
-            src="https://www.youtube.com/embed/CsrP58BXpTA?si=bfbQrsQAl51VJKPd&autoplay=1&mute=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <CETAFeatureCard />
-        <div className="video-container">
-          <iframe
-            width="600"
-            height="315"
-            src="https://www.youtube.com/embed/fL4GB7rie54?si=lArzvbR6h4vLfQcg&autoplay=1&mute=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
-
-        </div>
-        <OlympiadFeature />
-        <InternshipFeatur />
       </div>
     </div>
   );
