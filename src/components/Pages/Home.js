@@ -103,7 +103,7 @@ export const Home = () => {
             <h2>Step 1: Sign Up and Verify Your Email</h2>
             <ul>
               <li>Please sign up using this <Link to="/sign-up" id="status-link">Register</Link> link.</li>
-              <li>Once registered, confirm your email address by entering the OTP (One-Time Password) sent to your inbox from edubuk.notification@gmail.com</li>
+              <li>Once registered, confirm your email address by entering the OTP (One-Time Password) sent to your inbox from investment@edubukeseal.org</li>
             </ul>
             <h2>Step 2: Complete KYC Verification (Mandatory)</h2>
             <ul>
@@ -144,7 +144,7 @@ export const Home = () => {
                 a. <Link to="/dashboard/user/user-kyc" id="status-link">KYC Verification</Link><br></br>
                 b. <Link to="dashboard/user/user-status" id="status-link">Payment Status</Link><br></br>
                 c. <Link to="dashboard/user/user-status" id="status-link">Token Transfer Status</Link><br></br></li>
-              <li>Once your KYC is verified and payment is confirmed, you will receive a confirmation email from edubuk.notification@gmail.com. Please check your inbox, including spam or junk folders. Tokens will only be transferred after this confirmation email is sent.</li>
+              <li>Once your KYC is verified and payment is confirmed, you will receive a confirmation email from investment@edubukeseal.org. Please check your inbox, including spam or junk folders. Tokens will only be transferred after this confirmation email is sent.</li>
             </ul>
             <h3>Need Assistance</h3>
             <p>For any questions or assistance, please contact us at support@edubuk.com. Our support team typically responds within 12 hours, and always within 24 hours.</p>
