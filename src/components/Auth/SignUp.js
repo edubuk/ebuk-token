@@ -109,11 +109,16 @@ const SignUp = () => {
     }
 
     useEffect(()=>{
+        if(count===0) return
+        if(isOtpSent)
+        {
         const interval = setInterval(()=>{
-            setCount((prev)=>--prev)
+            setCount((prev)=>prev-1)
         },1000);
         return ()=> clearInterval(interval);
-    },[count])
+       }
+    },[count,isOtpSent])
+
     return (<>
         <div className='auth-container'>
             <Waves
@@ -152,7 +157,7 @@ const SignUp = () => {
             </div>}
             {isOtpSent && <div className='sign-up-container'>
                 <h1>Verify Email</h1>
-                <p>We have sent OTP to {inputData.email}. Please check your email</p>
+                <p>We've sent an OTP to {inputData.email}. Please check your inbox or spam folder to proceed</p>
                 <input type="string"
                     value={otp}
                     placeholder="Enter your OTP"
@@ -161,7 +166,7 @@ const SignUp = () => {
                 <div className='button-handler'>
                 <button onClick={registerHandler}>Submit</button>
                 <div className='resend-otp-box'>
-                {/* <button onClick={sendOtp} disabled={count!==0} className='otp-btn'>Resend OTP</button><p> after {count}</p> */}
+                <button onClick={sendOtp} disabled={count!==0} className='otp-btn'>Resend OTP</button>{count!==0&&<p> after {count}</p>}
                 </div>
                 </div>
             </div>}

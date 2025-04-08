@@ -98,5 +98,15 @@
   .otp-btn{
     border: none;
     background: transparent;
+    margin-left: 5px;
     
+  }
+  .otp-btn:hover{
+    background:none; 
+    color: #FFD700;
+    border: none;
+    box-shadow: none;
+  }
+  .otp-btn:disabled{
+    color:#ffd9004c
   }
