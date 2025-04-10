@@ -22,6 +22,7 @@ import BuyToken from "./components/Dashboard/User/BuyToken";
 import TermsAndConditions from "./components/Legals/TermCond";
 import PrivacyPolicy from "./components/Legals/PrivacyPolicy";
 import ScrollToTop from "./Scrolltop";
+import Chatbot from "./components/ChatBot/ChatBot.js";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
       <Toaster position="top-center" />
       <ScrollToTop />
       <NavBar />
+      <Chatbot />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
