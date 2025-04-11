@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./ChatBot.css";
 import { FaInstagram, FaLinkedin, FaTelegram,FaYoutube } from "react-icons/fa";
-import { MdClose } from "react-icons/md";
+import { CgCloseO } from "react-icons/cg";
 
 // Hardcoded data replacing API
 const chatbotData = {
@@ -198,7 +198,7 @@ const Chatbot = () => {
                 </button>
               </div>
               <span className="chatbot-title">Edubuk Bot</span><br></br>
-              <MdClose onClick={toggleChat}/>
+              <CgCloseO onClick={toggleChat} id="close-icon"/>
             </div>
           </div>
 
@@ -233,8 +233,8 @@ const SocialIcons = () => (
     <a href="https://www.instagram.com/edubuk_/" target="_blank" rel="noopener noreferrer">
       <FaInstagram />
     </a>
-    <a href="https://www.edubukeseal.com/" target="_blank" rel="noopener noreferrer">
-      <img src="logoIcon.svg" alt="Custom Icon" className="custom-social-icon" />
+    <a href="https://www.edubukeseal.org/" target="_blank" rel="noopener noreferrer">
+      <img src="logoIcon.svg" alt="Custom Icon" style={{ width: "27px", height: "27px" }} />
     </a>
     <a href="https://t.me/edubukofficial" target="_blank" rel="noopener noreferrer">
       <FaTelegram />
