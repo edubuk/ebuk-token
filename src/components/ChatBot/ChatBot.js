@@ -234,7 +234,7 @@ const SocialIcons = () => (
       <FaInstagram />
     </a>
     <a href="https://www.edubukeseal.org/" target="_blank" rel="noopener noreferrer">
-      <img src="logoIcon.svg" alt="Custom Icon" style={{ width: "27px", height: "27px" }} />
+      <img src="logoIcon.svg" alt="Custom Icon" style={{ width: "25px", height: "25px" }} />
     </a>
     <a href="https://t.me/edubukofficial" target="_blank" rel="noopener noreferrer">
       <FaTelegram />
