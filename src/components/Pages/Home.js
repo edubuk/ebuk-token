@@ -45,7 +45,9 @@ export const Home = () => {
         <div className="buyer-container">
         <div className='info-step-box'>
         <h1 className='gradient-text'>Utility of EBUK Tokens</h1>
-              <img src={ebuk} alt="ebuk-utility"></img>
+        <div className="utility-img-sec">
+              <img src={ebuk} alt="ebuk-utility" id="utility-img"></img>
+              </div>
                 <p>The EBUK Token is strictly a UTILITY TOKEN and NOT a SECURITY TOKEN. The value and use of the token are derived solely from its utility within the Edubuk platform and ecosystem. Key utilities of the EBUK Token include:</p>
                 <p>
         1. Learners across the globe will be purchasing EBUK tokens to enroll in Edubuk's CETA courses on AI, Generative AI, Blockchain, Cybersecurity, Data Science, Data Analytics, and Data Visualization.<br></br>

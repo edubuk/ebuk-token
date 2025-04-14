@@ -649,8 +649,8 @@
   }
 
   
-  .info-step-box>img{
-    width:100%;
+  .utility-img-sec>img{
+    width:90%;
     height:auto;
     display: block;
   }
@@ -666,9 +666,13 @@
 {
     background: radial-gradient(ellipse 75% 90% at center -10%, #2c407d 40%, #122145 70%, transparent 100%);
 }
+}
 
-
-
+.utility-img-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 
@@ -742,7 +746,10 @@
     margin-top: -20rem;
 }
 
-
-
+.utility-img-sec>img{
+    width:100%;
+    height:auto;
+    display: block;
+  }
 }
 
