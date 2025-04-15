@@ -8,10 +8,10 @@ import { CgCloseO } from "react-icons/cg";
 const chatbotData = {
         "layer_1": {
           "About EDUBUK": {},
-          "Edubuk's CV-on-Chain": "https://www.youtube.com/watch?v=-EEe8-ogkwY&t=160s",
-          "Edubuk's CETA": "https://www.youtube.com/watch?v=CsrP58BXpTA&t=145s",
-          "Edubuk's Olympiad": "https://www.youtube.com/watch?v=fL4GB7rie54&t=167s",
-          "Awards won by EDUBUK": "https://www.youtube.com/watch?v=5Cb6g7EEzAk&t=2s",
+          "Edubuk's CV-on-Chain": "https://www.youtube.com/watch?v=-EEe8-ogkwY",
+          "Edubuk's CETA": "https://www.youtube.com/watch?v=CsrP58BXpTA",
+          "Edubuk's Olympiad": "https://www.youtube.com/watch?v=fL4GB7rie54",
+          "Awards won by EDUBUK": "https://www.youtube.com/watch?v=5Cb6g7EEzAk",
           "EBUK TOKEN": {},
           "Utility of EBUK TOKEN": {},
           "EBUK Tokenomics": {},

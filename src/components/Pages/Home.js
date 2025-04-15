@@ -9,6 +9,7 @@ import InternshipFeatur from "../Features/InternshipFeature";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Member from "../Team&Advisor/Member";
 
 export const Home = () => {
 
@@ -156,6 +157,7 @@ export const Home = () => {
           <Link to="/dashboard/user/user-kyc" id="buy-link"> Proceed To Buy EBUK Tokens</Link>
         </div>
         <Tokenomics/>
+        <Member />
       </div>
     </div>
   );
