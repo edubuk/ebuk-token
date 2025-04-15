@@ -31,7 +31,14 @@
     justify-content: center;
     align-items: center;
 }
-
+.member-header{
+    font-size: calc(1.3rem + 2vw);
+    background: linear-gradient(to right, #ff98e2, #ffc876, #79fff7);
+    background-clip:text ;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
 .member-img{
     width: 250px;
     height: 250px;
@@ -41,7 +48,7 @@
 
 .member-name{
     color: white;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
@@ -51,4 +58,10 @@
     margin-top: -7px;
     padding: 0;
     
+}
+
+@media screen and (max-width:750px){
+    .member-container{
+        width: 85%;
+    }
 }

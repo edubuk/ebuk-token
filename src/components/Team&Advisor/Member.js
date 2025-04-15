@@ -13,7 +13,7 @@ const Member = () => {
   return (
     <div className='member-container'>
       <div className="team-section">
-    <h2 className="gradient-text">Meet Our Executives</h2>
+    <h2 className="member-header">Meet Our Executives</h2>
     <div className="members">
       <div className='member'>
         <img src={team1} alt="CEO Img" className="member-img"></img>
