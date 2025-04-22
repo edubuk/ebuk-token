@@ -275,6 +275,46 @@
   cursor: pointer;
 }
 
+.question-text {
+  color: #0A1F44; /* Dark Navy Blue */
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  /* background: #ffffff; */
+  /* padding: 10px 15px; */
+  /* border-radius: 12px; */
+  /* align-self: flex-end; */
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 100%;            /* Prevents overflow */
+  word-wrap: break-word;      /*Wraps long words
+  /* box-sizing: border-box;     Includes padding in width calculation */
+
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+
+}
+
+.answer-text {
+  color: #222;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: justify;
+  
+  font-family: 'Open Sans', sans-serif; /* Looks like chatbot typing */
+  /* background: #f1f0f0; */
+  /* padding: 10px 15px; */
+  border-radius: 12px;
+  align-self: flex-start;
+  width: 100%;
+
+  max-width: 100%;            /* Prevents overflow */
+  /* word-wrap: break-word;      Wraps long words */
+  /* box-sizing: border-box;     /*Includes padding in width calculation */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
+
+}
+
 @media  screen and (max-width:450px) {
     .chatbot-container {
         position: fixed;
