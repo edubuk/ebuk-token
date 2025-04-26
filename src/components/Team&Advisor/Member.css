@@ -62,8 +62,8 @@
 
 .member {
     width: 100%;
-    max-width: 250px;
-    min-height: 400px; /* maintain card height */
+    max-width: 260px;
+    min-height: 450px; /* maintain card height */
     padding: 5px 3px;
     background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
     border-radius: 20px;
@@ -123,7 +123,11 @@
     border-radius: 12px;
     margin-bottom: 12px;
   }
-  
+  .social-icons{
+    color: #0077B5;
+    width:30px;
+    height: 30px;
+  }
   .member-description {
     font-size: 1rem;
     color: #666;

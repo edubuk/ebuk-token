@@ -59,15 +59,15 @@ const CVFeatures = () => {
           <h3 className="section-title">Background Verification: Then vs Now</h3>
           <div className="benefit-grid">
             <div className="benefit-item">
-              <FaGraduationCap className="mini-icon" />
+              <FaGraduationCap className="icon" />
               <p>Then:<span id="effect">⏳ Slow </span> <span>→</span> Now:<span id="effect">⚡Instant</span></p>
             </div>
             <div className="benefit-item">
-              <GiReceiveMoney className="mini-icon" />
+              <GiReceiveMoney className="icon" />
               <p> Then: <span id="effect">💸Costly</span> → Now: <span id="effect">💰 Cost-Effective</span></p>
             </div>
             <div className="benefit-item">
-              <FaShieldAlt className="mini-icon" />
+              <FaShieldAlt className="icon" />
               <p> Then:<span id="effect">❌Fraud-Prone</span>  → Now:<span id="effect">✅Secure</span></p>
             </div>
           </div>

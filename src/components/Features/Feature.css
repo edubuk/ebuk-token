@@ -86,12 +86,6 @@
     margin: 5px 0;
   }
   
-  .icon {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-    
-  }
   
   .warning {
     color: #ff4d4d;
@@ -113,11 +107,6 @@
     justify-content: center;
     gap: 8px;
     margin: 5px 0;
-  }
-  
-  .mini-icon {
-    font-size: 1.2rem;
-    color: #ffffff;
   }
   
   .benefit-grid {
@@ -190,13 +179,12 @@
   /* Card Content Styling */
   .card-content {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: flex-start;
+    flex-direction:column;
+    gap:3px;
+    width: 100%;
   }
   
-  .icon {
-    font-size: 40px;
-  }
   
   /* Title & Description */
   .card-title {
@@ -216,57 +204,6 @@
     box-shadow: #005580 0px 5px 15px;
   }
   
-  /* .bg-purple {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-  }
-  
-  .bg-green {
-    background: linear-gradient(to right, #28a745, #20c997);
-  }
-  
-  .bg-orange {
-    background: linear-gradient(to right, #ff7e00, #ff4500);
-  }
-  
-  .bg-pink {
-    background: linear-gradient(to right, #ff4b7d, #ff007f);
-  }
-  
-  .bg-dark {
-    background: linear-gradient(to right, #2c3e50, #000000);
-  } */
-  
-
-  /* .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-  } */
-  
-  /* .card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-  }
-   */
-  /* .card:hover {
-    transform: translateY(-5px);
-  } */
-  
-  .icon {
-    font-size: 40px;
-    color: #ffffff;
-    margin-bottom: 10px;
-  }
-
-  /* h2{
-    text-align: center;
-  } */
   
   h3 {
     font-size: 18px;
