@@ -25,7 +25,7 @@
     flex-wrap: wrap;
     gap: 15px;
 }
-.member{
+/* .member{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,8 +57,98 @@
     width: 250px;
     margin-top: -7px;
     padding: 0;
-    
-}
+} */
+
+
+.member {
+    width: 100%;
+    max-width: 250px;
+    min-height: 400px; /* maintain card height */
+    padding: 5px 3px;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  .member-img-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 16px auto;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6e8efb, #a777e3) padding-box;
+    padding: 4px;
+  }
+  
+  .member-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .member-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .member-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .member-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .member-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 600px) {
+    .member {
+      padding: 20px 16px;
+    }
+    .member-img-wrapper {
+      width: 100px;
+      height: 100px;
+    }
+    .member-name {
+      font-size: 1.4rem;
+    }
+    .member-description {
+      font-size: 0.95rem;
+    }
+  }
+  
+  
+  
 
 @media screen and (max-width:750px){
     .member-container{

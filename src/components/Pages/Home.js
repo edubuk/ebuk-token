@@ -34,7 +34,7 @@ export const Home = () => {
           <iframe
             width="600"
             height="315"
-            src="https://www.youtube.com/embed/5Cb6g7EEzAk?si=ILTH6o_E9nirqOr3&autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/RaFvWqkBI4g?si=mFEMacoPLbuHRKQb&autoplay=1&mute=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -75,7 +75,7 @@ export const Home = () => {
           <iframe
             width="600"
             height="315"
-            src="https://www.youtube.com/embed/CsrP58BXpTA?si=bfbQrsQAl51VJKPd&autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/Cua_dnoZXbo?si=PsCx9Mg88J_XA_gF&autoplay=1&mute=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -88,7 +88,7 @@ export const Home = () => {
           <iframe
             width="600"
             height="315"
-            src="https://www.youtube.com/embed/fL4GB7rie54?si=lArzvbR6h4vLfQcg&autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/Tc5lDlnHH-A?si=fS2FOwHEvCSho-ti&autoplay=1&mute=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

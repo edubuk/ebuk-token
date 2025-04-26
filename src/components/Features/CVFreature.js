@@ -12,7 +12,7 @@ const CVFeatures = () => {
         <iframe
           width="600"
           height="315"
-          src="https://www.youtube.com/embed/-EEe8-ogkwY?si=axYMLWozjH0ntv51&autoplay=1&mute=1"
+          src="https://www.youtube.com/embed/e3is_xzlozw?si=MO9klsuIck_Pp_N&autoplay=1&mute=1"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
