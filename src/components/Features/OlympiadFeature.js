@@ -1,7 +1,7 @@
 import React from "react";
 import "./Feature.css"; // Importing the CSS file
 import { FaBrain,FaGraduationCap, FaAward } from "react-icons/fa";
-import { BsBlockquoteLeft } from "react-icons/bs";
+import { TbBlockquote } from "react-icons/tb";
 
 const OlympiadFeature = () => {
   return (
@@ -27,9 +27,9 @@ const OlympiadFeature = () => {
       </div>
 
       {/* Concept by IIT, IIM, etc. */}
-      <div className="card bg-purple">
+      <div className="card bg-green">
         <div className="card-content">
-          <BsBlockquoteLeft className="icon" />
+          <TbBlockquote className="icon" />
           <div>
             <h2>Concept by Experts</h2>
             <p>

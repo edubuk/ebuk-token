@@ -35,8 +35,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding-top: 80px;
-    height: 30rem;
+    padding-top: 90px;
+    height: 28rem;
     aspect-ratio: 1;
     background: radial-gradient(ellipse 70% 90% at center -10%, #006666d1 40%, #005580 80%,#007380 20%, transparent 100%);
    
@@ -81,6 +81,7 @@
     align-items: center;
     gap:0.5rem;
     color: #ffff;
+    margin-top: -20px;
 }
 
 #timer-section
@@ -214,12 +215,15 @@
     padding: 5px 15px;
     border-radius: 1.2rem;
     background-color: #004466; 
-    color: #FFD700; 
+    color: #FFFFFF; 
     text-decoration: none;
     border: 1px solid #FFD700;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
+}
+.buyer-container>a:hover{
+    color: #FFD700;;
 }
 
 

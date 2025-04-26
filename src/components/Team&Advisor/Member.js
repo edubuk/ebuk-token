@@ -104,7 +104,7 @@ const Member = () => {
         </div>
         <div className="member-content">
         <p className="member-name">James Wren</p>
-        <p className="member-badge">Lead BD,Liquidium</p>
+        <p className="member-badge">Lead BD, Liquidium</p>
         <p className="member-description">7+ years experience in Web3, Blockchain Degen & influencer in the BTC Ecosystem</p>
         </div>
       </div>
