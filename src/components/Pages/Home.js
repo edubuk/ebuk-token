@@ -88,7 +88,7 @@ export const Home = () => {
           <iframe
             width="600"
             height="315"
-            src="https://www.youtube.com/embed/Tc5lDlnHH-A?si=fS2FOwHEvCSho-ti&autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/kORadYQBGLY?autoplay=1&mute=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
