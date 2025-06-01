@@ -193,6 +193,7 @@
     list-style-type:disc; /* Proper bullet points */
     padding-left: 20px; /* Proper alignment */
     margin: 10px 0;
+    padding-bottom: 10px;
   }
   
   .kyc-container li {
@@ -203,8 +204,8 @@
     font-weight: 500;
   }
   
-  .kyc-container button {
-    padding: 10px 15px;
+  .kyc-container>a {
+    padding: 10px 60px;
     border-radius: 1.2rem;
     background-color: #004466; 
     color: #FFD700; 
@@ -213,7 +214,6 @@
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
-    margin-top: 20px;
     font-size: 16px;
     width: 100%;
   }

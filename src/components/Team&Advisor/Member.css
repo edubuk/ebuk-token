@@ -25,39 +25,7 @@
     flex-wrap: wrap;
     gap: 15px;
 }
-/* .member{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.member-header{
-    font-size: calc(1.3rem + 2vw);
-    background: linear-gradient(to right, #ff98e2, #ffc876, #79fff7);
-    background-clip:text ;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-}
-.member-img{
-    width: 250px;
-    height: 250px;
-    background:#ffffff;
-    border-radius: 2rem;
-}
 
-.member-name{
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-}
-.member-tag{
-    text-align: center;
-    width: 250px;
-    margin-top: -7px;
-    padding: 0;
-} */
 
 
 .member {

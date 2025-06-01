@@ -64,7 +64,7 @@ const BuyToken = () => {
     setAmount(enteredAmount);
     let edbukToken = 0;
     if (enteredAmount > 0)
-      edbukToken = selOption == "INR" ? (enteredAmount / 1.32) : (enteredAmount / 0.015);
+      edbukToken = selOption == "INR" ? (enteredAmount / 2.25) : (enteredAmount / 0.027);
     setTokenAmount(Math.round(edbukToken * 1000) / 1000);
   };
 
@@ -272,7 +272,7 @@ const BuyToken = () => {
                   id="tokenAmount"
                   value={tokenAmount}
                   disabled
-                  placeholder="1 EBUK = $0.015 or ₹1.32"
+                  placeholder="1 EBUK = $0.027 or ₹2.25"
                 />
               </div>
               <div className="input-field">

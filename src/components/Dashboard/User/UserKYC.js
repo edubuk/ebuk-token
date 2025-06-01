@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Synaps } from "@synaps-io/verify-sdk";
 import toast from 'react-hot-toast';
 import { useAuth } from '../../../context/auth';
+import ScrollToTop from './../../../Scrolltop';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -62,7 +63,7 @@ const UserKYC = () => {
   return (
     <div className="kyc-container">
       <h1>Please be ready with the following before starting the KYC</h1>
-      <p>1. Face Liveness</p>
+      <p>1. One passport size phot</p>
       <p>2. One of the documents from the following:</p>
       <ul>
         <li><strong>National ID:</strong> Aadhaar Card or any other government-issued ID</li>
@@ -70,7 +71,8 @@ const UserKYC = () => {
         <li><strong>Driver's License</strong></li>
         <li><strong>Resident Permit</strong></li>
       </ul>
-      <button onClick={getSessionId}>{sessionToken?"Start KYC":"Start Verification"}</button>
+      <a href='https://forms.gle/koB3E5KZxfRnmLwc7' target='_blank' rel='noreferrer'>Start KYC</a>
+      {/* <button onClick={getSessionId}>{sessionToken?"Start KYC":"Start Verification"}</button> */}
     </div>
   );
 };

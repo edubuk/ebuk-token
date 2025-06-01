@@ -107,6 +107,7 @@ const UserStatus = () => {
       <div className='status-card'>
         <HiOutlineDocumentSearch id='icon' />
         <h1>KYC</h1>
+        {/* <p>Verification can take up to 24 hours on business days. </p> */}
         {/* <p>Current Status:<strong> {status.overallStatus}</strong></p> */}
         <div className='kyc-status'>
           <div className='kyc-status-item'>
