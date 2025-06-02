@@ -112,10 +112,10 @@ export const Home = () => {
             <ul>
               <li>Before receiving any tokens, KYC verification is mandatory in accordance with regulatory requirements to prevent money laundering and ensure a secure investment process.</li>
               <li>After signing in, navigate to your Dashboard and complete the KYC step.</li>
-              <li>For a smooth experience, we recommend using your mobile device. You will be required to:<br></br>
-                a. Take a live photo (liveliness check)<br></br>
-                b. Upload one government-issued ID (passport or a valid national ID from your country of domicile) </li>
-              <li>KYC is handled by our trusted third-party partner, Synaps. All data submitted is encrypted and stored securely, in compliance with international data privacy standards.</li>
+              <li>You will be required to :<br></br>
+              a). Upload 1 Official ID as per your country norm (Passport is preferred: please upload the front page of your ID with your name and photograph clearly visible).</li>
+              <li>KYC is handled by our trusted third-party partner. All data submitted is encrypted and stored securely, in compliance with international data privacy standards.</li>
+              <li><a href="https://forms.gle/koB3E5KZxfRnmLwc7" target="_blank" rel="noreferrer" id="status-link">Click here</a> to submit your details for KYC.</li>
             </ul>
             <h2>Step 3: Choose Your Payment Method</h2>
             <ul>

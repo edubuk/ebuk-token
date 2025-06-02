@@ -63,11 +63,10 @@ const UserKYC = () => {
   return (
     <div className="kyc-container">
       <h1>Please be ready with the following before starting the KYC</h1>
-      <p>1. One passport size phot</p>
-      <p>2. One of the documents from the following:</p>
+      <p>One of the documents from the following:</p>
       <ul>
         <li><strong>National ID:</strong> Aadhaar Card or any other government-issued ID</li>
-        <li><strong>Passport</strong></li>
+        <li><strong>Passport(preferred)</strong></li>
         <li><strong>Driver's License</strong></li>
         <li><strong>Resident Permit</strong></li>
       </ul>
